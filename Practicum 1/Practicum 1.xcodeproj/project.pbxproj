@@ -1,0 +1,251 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5A0081B1BA185D600AC2CCE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0081A1BA185D600AC2CCE /* main.swift */; };
+		F5A008221BA1864A00AC2CCE /* GlowAct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A008211BA1864A00AC2CCE /* GlowAct.swift */; };
+		F5A008241BA1865000AC2CCE /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A008231BA1865000AC2CCE /* City.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5A008151BA185D600AC2CCE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F5A008171BA185D600AC2CCE /* Practicum 1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Practicum 1"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A0081A1BA185D600AC2CCE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F5A008211BA1864A00AC2CCE /* GlowAct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlowAct.swift; sourceTree = "<group>"; };
+		F5A008231BA1865000AC2CCE /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5A008141BA185D600AC2CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5A0080E1BA185D600AC2CCE = {
+			isa = PBXGroup;
+			children = (
+				F5A008191BA185D600AC2CCE /* Practicum 1 */,
+				F5A008181BA185D600AC2CCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5A008181BA185D600AC2CCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5A008171BA185D600AC2CCE /* Practicum 1 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5A008191BA185D600AC2CCE /* Practicum 1 */ = {
+			isa = PBXGroup;
+			children = (
+				F5A008231BA1865000AC2CCE /* City.swift */,
+				F5A008211BA1864A00AC2CCE /* GlowAct.swift */,
+				F5A0081A1BA185D600AC2CCE /* main.swift */,
+			);
+			path = "Practicum 1";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5A008161BA185D600AC2CCE /* Practicum 1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5A0081E1BA185D600AC2CCE /* Build configuration list for PBXNativeTarget "Practicum 1" */;
+			buildPhases = (
+				F5A008131BA185D600AC2CCE /* Sources */,
+				F5A008141BA185D600AC2CCE /* Frameworks */,
+				F5A008151BA185D600AC2CCE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Practicum 1";
+			productName = "Practicum 1";
+			productReference = F5A008171BA185D600AC2CCE /* Practicum 1 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5A0080F1BA185D600AC2CCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Jules Kreutzer";
+				TargetAttributes = {
+					F5A008161BA185D600AC2CCE = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = F5A008121BA185D600AC2CCE /* Build configuration list for PBXProject "Practicum 1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F5A0080E1BA185D600AC2CCE;
+			productRefGroup = F5A008181BA185D600AC2CCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5A008161BA185D600AC2CCE /* Practicum 1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5A008131BA185D600AC2CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A0081B1BA185D600AC2CCE /* main.swift in Sources */,
+				F5A008221BA1864A00AC2CCE /* GlowAct.swift in Sources */,
+				F5A008241BA1865000AC2CCE /* City.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F5A0081C1BA185D600AC2CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5A0081D1BA185D600AC2CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F5A0081F1BA185D600AC2CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5A008201BA185D600AC2CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5A008121BA185D600AC2CCE /* Build configuration list for PBXProject "Practicum 1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A0081C1BA185D600AC2CCE /* Debug */,
+				F5A0081D1BA185D600AC2CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A0081E1BA185D600AC2CCE /* Build configuration list for PBXNativeTarget "Practicum 1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A0081F1BA185D600AC2CCE /* Debug */,
+				F5A008201BA185D600AC2CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5A0080F1BA185D600AC2CCE /* Project object */;
+}
