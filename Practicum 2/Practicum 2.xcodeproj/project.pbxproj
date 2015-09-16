@@ -19,8 +19,9 @@
 		F5A0085A1BA1BE3400AC2CCE /* EasterEggViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A008591BA1BE3400AC2CCE /* EasterEggViewController.swift */; };
 		F5A0085C1BA1BE3B00AC2CCE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0085B1BA1BE3B00AC2CCE /* DetailsViewController.swift */; };
 		F5A0085E1BA1BE4500AC2CCE /* MoreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0085D1BA1BE4500AC2CCE /* MoreDetailsViewController.swift */; };
-		F5A008601BA1C52500AC2CCE /* applause-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A0085F1BA1C52500AC2CCE /* applause-2.mp3 */; };
 		F5A008621BA1C5A300AC2CCE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A008611BA1C5A300AC2CCE /* AVFoundation.framework */; };
+		F5A008641BA1CBE300AC2CCE /* applause-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A008631BA1CBE300AC2CCE /* applause-2.mp3 */; };
+		F5AEF1241BA1E4F9001AB766 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5AEF1231BA1E4F9001AB766 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,9 @@
 		F5A008591BA1BE3400AC2CCE /* EasterEggViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasterEggViewController.swift; sourceTree = "<group>"; };
 		F5A0085B1BA1BE3B00AC2CCE /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F5A0085D1BA1BE4500AC2CCE /* MoreDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreDetailsViewController.swift; sourceTree = "<group>"; };
-		F5A0085F1BA1C52500AC2CCE /* applause-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "applause-2.mp3"; path = "../../../../../Desktop/applause-2.mp3"; sourceTree = "<group>"; };
 		F5A008611BA1C5A300AC2CCE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F5A008631BA1CBE300AC2CCE /* applause-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "applause-2.mp3"; sourceTree = "<group>"; };
+		F5AEF1231BA1E4F9001AB766 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5AEF1241BA1E4F9001AB766 /* MediaPlayer.framework in Frameworks */,
 				F5A008621BA1C5A300AC2CCE /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +79,7 @@
 		F5A008251BA19A9500AC2CCE = {
 			isa = PBXGroup;
 			children = (
+				F5AEF1231BA1E4F9001AB766 /* MediaPlayer.framework */,
 				F5A008611BA1C5A300AC2CCE /* AVFoundation.framework */,
 				F5A008301BA19A9500AC2CCE /* Practicum 2 */,
 				F5A008461BA19A9500AC2CCE /* Practicum 2Tests */,
@@ -95,7 +99,6 @@
 		F5A008301BA19A9500AC2CCE /* Practicum 2 */ = {
 			isa = PBXGroup;
 			children = (
-				F5A0085F1BA1C52500AC2CCE /* applause-2.mp3 */,
 				F5A008531BA1A6F300AC2CCE /* ei.png */,
 				F5A008331BA19A9500AC2CCE /* AppDelegate.swift */,
 				F5A008351BA19A9500AC2CCE /* ViewController.swift */,
@@ -115,6 +118,7 @@
 		F5A008311BA19A9500AC2CCE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5A008631BA1CBE300AC2CCE /* applause-2.mp3 */,
 				F5A008321BA19A9500AC2CCE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -181,6 +185,7 @@
 		F5A008261BA19A9500AC2CCE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Jules Kreutzer";
 				TargetAttributes = {
@@ -220,7 +225,7 @@
 				F5A008391BA19A9500AC2CCE /* Main.storyboard in Resources */,
 				F5A0083E1BA19A9500AC2CCE /* LaunchScreen.xib in Resources */,
 				F5A0083B1BA19A9500AC2CCE /* Images.xcassets in Resources */,
-				F5A008601BA1C52500AC2CCE /* applause-2.mp3 in Resources */,
+				F5A008641BA1CBE300AC2CCE /* applause-2.mp3 in Resources */,
 				F5A008541BA1A6F300AC2CCE /* ei.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +446,7 @@
 				F5A0084F1BA19A9500AC2CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5A008501BA19A9500AC2CCE /* Build configuration list for PBXNativeTarget "Practicum 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +455,7 @@
 				F5A008521BA19A9500AC2CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

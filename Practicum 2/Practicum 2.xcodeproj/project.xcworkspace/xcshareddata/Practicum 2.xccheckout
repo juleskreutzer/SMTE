@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7085A9DD-0DB8-4FDA-9F1C-7C97ADC9C104</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Practicum 2</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B09C8D174D34168A3D71BDDA2FE204074C85FFAE</key>
 		<string>https://github.com/juleskreutzer/SMTE.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Practicum 2/Practicum 2.xcodeproj/project.xcworkspace</string>
+	<string>Practicum 2/Practicum 2.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B09C8D174D34168A3D71BDDA2FE204074C85FFAE</key>

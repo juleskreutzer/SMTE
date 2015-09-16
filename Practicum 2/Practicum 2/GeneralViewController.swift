@@ -8,13 +8,16 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 class GeneralViewController: UIViewController {
-
+    
+    var player: AVAudioPlayer!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+                // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,8 +37,23 @@ class GeneralViewController: UIViewController {
     */
 
     @IBAction func btnPlaySound(sender: AnyObject) {
-        let mp3_one_path = NSBundle.mainBundle().pathForResource("applause-2", ofType: "mp3")
-        var player = AVPlayer(URL: NSURL(fileURLWithPath: mp3_one_path!))
-        player.play()
+        var audioFilePath = NSBundle.mainBundle().pathForResource("applause-2", ofType: "mp3")
+        
+        if audioFilePath != nil {
+            
+            var audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
+            do{
+                
+            
+            player = try AVAudioPlayer(contentsOfURL: audioFileUrl, fileTypeHint: nil)
+            player.play()
+            } catch
+            {
+                print(error)
+            }
+            
+        } else {
+            print("audio file is not found")
+        }
     }
 }
