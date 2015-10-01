@@ -14,9 +14,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblLife: UILabel!
     @IBOutlet weak var lblActiveYears: UILabel!
-    @IBOutlet weak var lblCountryOfOrigin: UILabel!
     @IBOutlet weak var lblcomments: UITextView!
 
+    @IBOutlet weak var lbltest: UILabel!
     
     var selectedPirate: Pirate?
     
@@ -26,8 +26,8 @@ class DetailsViewController: UIViewController {
         
         self.lblName.text = self.selectedPirate?.name
         self.lblLife.text = self.selectedPirate?.life
-        self.lblActiveYears.text = self.selectedPirate?.yearsActive
-        //self.lblCountryOfOrigin.text = self.selectedPirate?.countryOrigin
+        self.lblActiveYears.text = self.selectedPirate?.countryOrigin
+        self.lbltest.text = self.selectedPirate?.countryOrigin
         self.lblcomments.text = self.selectedPirate?.comments
         
         
