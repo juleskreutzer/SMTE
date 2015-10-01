@@ -20,6 +20,6 @@ class GlowAct {
     }
     
     func ShowInfo(){
-        println("The act is called \(naam) and starts at \(startTime). It is given an average rating of \(rating)")
+        print("The act is called \(naam) and starts at \(startTime). It is given an average rating of \(rating)")
     }
 }

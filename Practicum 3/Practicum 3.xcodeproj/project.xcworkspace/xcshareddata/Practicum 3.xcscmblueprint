@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B09C8D174D34168A3D71BDDA2FE204074C85FFAE+++467F84F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B09C8D174D34168A3D71BDDA2FE204074C85FFAE+++467F84F" : 0,
+    "67620B5EFA902936DF04070AF595B76AB0333747+++CD1BF1D" : 0,
+    "67620B5EFA902936DF04070AF595B76AB0333747+++C0590B4" : 0,
+    "67620B5EFA902936DF04070AF595B76AB0333747+++FAE76B0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1313B78D-2435-43E6-B7AA-63B79BDD1182",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B09C8D174D34168A3D71BDDA2FE204074C85FFAE+++467F84F" : "SMTE\/",
+    "67620B5EFA902936DF04070AF595B76AB0333747+++CD1BF1D" : "Alamofire\/",
+    "67620B5EFA902936DF04070AF595B76AB0333747+++C0590B4" : "Alamofire\/",
+    "67620B5EFA902936DF04070AF595B76AB0333747+++FAE76B0" : "Alamofire\/Alamofire\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Practicum 3",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Practicum 3\/Practicum 3.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747+++C0590B4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747+++CD1BF1D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747+++FAE76B0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/juleskreutzer\/SMTE.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B09C8D174D34168A3D71BDDA2FE204074C85FFAE+++467F84F"
+    }
+  ]
+}

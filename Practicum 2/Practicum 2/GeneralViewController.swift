@@ -37,11 +37,11 @@ class GeneralViewController: UIViewController {
     */
 
     @IBAction func btnPlaySound(sender: AnyObject) {
-        var audioFilePath = NSBundle.mainBundle().pathForResource("applause-2", ofType: "mp3")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("applause-2", ofType: "mp3")
         
         if audioFilePath != nil {
             
-            var audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
+            let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
             do{
                 
             

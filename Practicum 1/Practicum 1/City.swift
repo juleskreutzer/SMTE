@@ -21,9 +21,9 @@ class City {
     }
     
     func ShowInfo(){
-        println("In the city of \(name) there are currently living \(population) people. The following GlowActs are available:")
-        for i in 0..<GlowActs.count{
-            println(GlowActs[i].ShowInfo())
+        print("In the city of \(name) there are currently living \(population) people. The following GlowActs are available:")
+        for i in GlowActs{
+            print(i.ShowInfo())
         }
     }
 }

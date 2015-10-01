@@ -94,6 +94,7 @@
 		F5A0080F1BA185D600AC2CCE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Jules Kreutzer";
 				TargetAttributes = {
@@ -244,6 +245,7 @@
 				F5A008201BA185D600AC2CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
