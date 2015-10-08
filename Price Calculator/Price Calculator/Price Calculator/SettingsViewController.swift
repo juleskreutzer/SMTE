@@ -12,7 +12,7 @@ class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBar.appearance().barTintColor = Colors.getYellow("Bla")
+        UITabBar.appearance().barTintColor = Colors.yellow
         // Do any additional setup after loading the view.
     }
 
