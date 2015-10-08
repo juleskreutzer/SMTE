@@ -8,11 +8,21 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController, UIPickerViewDelegate{
+class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,UIPickerViewDelegate{
 
+    @IBOutlet weak var StartCurrency: UIPickerView!
+    @IBOutlet weak var lblStartCurrency: UILabel!
+    let pickerData = ["Euro","US Dollar","Pound","Belgian Euro","Australian Dollar"] // PLACEHOLDER CODE
+    
+    @IBOutlet weak var CurrencyCell1: UITableViewCell!
+    @IBOutlet weak var CurrencyCell2: UITableViewCell!
+    @IBOutlet weak var CurrencyCell3: UITableViewCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UITabBar.appearance().barTintColor = Colors.yellow
+        StartCurrency.dataSource = self
+        StartCurrency.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,19 +40,39 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate{
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4
+        return 5
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        
+        switch(section){
+        case 0: return 3
+        case 1: return 1
+        case 2: return 2
+        case 3: return 1
+        case 4: return 2
+        default: return 1
+        }
     }
     
+    var enabledCategory:Int = 0 // you could add i base value
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //CODE TO BE RUN ON CELL TOUCH
         
+        //let indexPath = tableView.indexPathForSelectedRow();
+        if (indexPath.row == 0 && indexPath.section == 0)
+        {
+        CurrencyCell2.hidden = false
+        }
+        else
+        {
+            CurrencyCell2.hidden = true
+        }
     }
+    
 
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
@@ -97,5 +127,23 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate{
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: - Delegates and data sources
+    //MARK: Data Sources
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    //MARK: Delegates
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        lblStartCurrency.text = pickerData[row]
+    }
 
 }

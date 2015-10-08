@@ -86,7 +86,7 @@
         <!--Item-->
         <scene sceneID="BNT-bI-cMS">
             <objects>
-                <tableViewController id="w7d-Cf-i6z" customClass="SettingsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="w7d-Cf-i6z" customClass="SettingsTableViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="mum-hn-UF8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,6 +109,12 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vns-lp-aK0">
+                                                    <rect key="frame" x="279" y="14" width="111" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -120,6 +126,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="edO-TV-wj0" id="X5j-u0-KDW">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFE-iR-8jP">
+                                                    <rect key="frame" x="0.0" y="-86" width="600" height="216"/>
+                                                </pickerView>
+                                            </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -225,6 +236,16 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="XZn-wM-GSL"/>
+                    <connections>
+                        <outlet property="CurrencyCell1" destination="ddn-vd-V2g" id="sbI-hF-rNt"/>
+                        <outlet property="CurrencyCell2" destination="edO-TV-wj0" id="ZJd-C2-JZI"/>
+                        <outlet property="CurrencyCell3" destination="y4W-Xc-qCZ" id="Rgd-zO-Td0"/>
+                        <outlet property="StartCurrency" destination="SFE-iR-8jP" id="bO9-fN-AZ2"/>
+                        <outlet property="lblStartCurrency" destination="Vns-lp-aK0" id="Dd7-Zh-NOJ"/>
+                        <outletCollection property="StartCurrency" destination="SFE-iR-8jP" collectionClass="NSMutableArray" id="8Gt-zm-Cpe"/>
+                        <outletCollection property="StartCurrency" destination="SFE-iR-8jP" collectionClass="NSMutableArray" id="S24-gd-ddB"/>
+                        <outletCollection property="StartCurrency" destination="SFE-iR-8jP" collectionClass="NSMutableArray" id="xvx-kA-ECl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAm-kN-l2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

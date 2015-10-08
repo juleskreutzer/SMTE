@@ -38,7 +38,7 @@ class StartViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+ 
     @IBAction func showInfo(sender: AnyObject) {
         let alertController = UIAlertController(title: "Price Calculator", message: "Calculate your list price based on values you have stored in your settings, or enter custom values for this calculation", preferredStyle: .Alert)
         
