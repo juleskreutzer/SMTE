@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="78a-xY-hLU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8g-g5-CyC">
+                                <rect key="frame" x="20" y="184" width="560" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Use Default Settigns"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mr-xhF">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Use Other Variables"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="IHP-mr-xhF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0bd-1c-2op"/>
+                            <constraint firstItem="S8g-g5-CyC" firstAttribute="trailing" secondItem="IHP-mr-xhF" secondAttribute="trailing" id="SNG-Az-nmI"/>
+                            <constraint firstItem="IHP-mr-xhF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Viv-FP-hBV"/>
+                            <constraint firstItem="IHP-mr-xhF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="coJ-K1-WmK"/>
+                            <constraint firstItem="IHP-mr-xhF" firstAttribute="leading" secondItem="S8g-g5-CyC" secondAttribute="leading" id="dHV-qu-NKO"/>
+                            <constraint firstItem="IHP-mr-xhF" firstAttribute="top" secondItem="S8g-g5-CyC" secondAttribute="bottom" constant="71" id="yxB-qv-FoV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="uea-tS-Wgo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="313"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="sAP-4x-E7G">
+            <objects>
+                <viewController id="dWz-tg-R7g" customClass="SettingsViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="91G-hD-NzF"/>
+                        <viewControllerLayoutGuide type="bottom" id="dWo-v9-anN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fga-Sh-Z03">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="8CL-DJ-ZmR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tAE-sj-yui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="1040"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FYB-2V-6a6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="78a-xY-hLU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Seh-Gg-bRp">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="c3w-Lh-fWw"/>
+                        <segue destination="dWz-tg-R7g" kind="relationship" relationship="viewControllers" id="2yf-AA-yla"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AbS-yS-JXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="313"/>
+        </scene>
+    </scenes>
+</document>
