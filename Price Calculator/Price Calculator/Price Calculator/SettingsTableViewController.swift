@@ -14,6 +14,7 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     @IBOutlet weak var lblStartCurrency: UILabel!
     let pickerData = ["Euro","US Dollar","Pound","Belgian Euro","Australian Dollar"] // PLACEHOLDER CODE
     
+    @IBOutlet weak var MainTable: UITableView!
     @IBOutlet weak var CurrencyCell1: UITableViewCell!
     @IBOutlet weak var CurrencyCell2: UITableViewCell!
     @IBOutlet weak var CurrencyCell3: UITableViewCell!
@@ -26,6 +27,7 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         StartCurrency.delegate = self
 
         UITabBar.appearance().barTintColor = Colors.green
+        
 
 
         // Uncomment the following line to preserve selection between presentations
@@ -71,10 +73,21 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         }
         else
         {
-            CurrencyCell2.hidden = true
+        CurrencyCell2.hidden = true
         }
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        if (indexPath.row == 1 && indexPath.section == 0)
+        {
+            return 176
+        }
+        else
+        {
+            return 44
+        }
+    }
 
     
     /*
