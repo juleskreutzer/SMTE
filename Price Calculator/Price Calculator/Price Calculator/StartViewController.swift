@@ -9,11 +9,16 @@
 import UIKit
 
 class StartViewController: UIViewController {
+    @IBOutlet weak var defaultVars: UIButton!
+    @IBOutlet weak var customVars: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBar.appearance().barTintColor = UIColor(red: 1, green: 0.8, blue: 0.3, alpha: 1.0)
-
+        defaultVars.tintColor = Colors.green
+        customVars.tintColor = Colors.green
+        self.view.backgroundColor = Colors.blue
+        UITabBar.appearance().barTintColor = Colors.yellow
         // Do any additional setup after loading the view.
     }
 
