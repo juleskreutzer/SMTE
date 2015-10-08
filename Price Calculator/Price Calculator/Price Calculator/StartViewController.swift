@@ -19,6 +19,7 @@ class StartViewController: UIViewController {
         customVars.tintColor = Colors.green
         self.view.backgroundColor = Colors.blue
         UITabBar.appearance().barTintColor = Colors.yellow
+        UINavigationBar.appearance().barTintColor = Colors.green
         // Do any additional setup after loading the view.
     }
 
@@ -37,5 +38,23 @@ class StartViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    @IBAction func showInfo(sender: AnyObject) {
+        let alertController = UIAlertController(title: "Price Calculator", message: "Calculate your list price based on values you have stored in your settings, or enter custom values for this calculation", preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func showLogin(sender: AnyObject) {
+        let alertController = UIAlertController(title: "Login", message: "Sorry, but the login function isn't available yet.", preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
 
 }

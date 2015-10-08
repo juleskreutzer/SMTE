@@ -44,8 +44,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ez9-DH-EJ9">
-                        <barButtonItem key="leftBarButtonItem" title="Login" id="c3M-O7-pIC"/>
-                        <barButtonItem key="rightBarButtonItem" title="?" id="0cv-fL-kFJ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Login" id="c3M-O7-pIC">
+                            <connections>
+                                <action selector="showLogin:" destination="BYZ-38-t0r" id="reH-KY-wih"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="?" id="0cv-fL-kFJ">
+                            <connections>
+                                <action selector="showInfo:" destination="BYZ-38-t0r" id="Hlu-Bk-7qX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="customVars" destination="IHP-mr-xhF" id="fjS-BI-g1g"/>
