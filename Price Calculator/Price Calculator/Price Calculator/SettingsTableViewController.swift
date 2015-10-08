@@ -20,13 +20,13 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
-        UITabBar.appearance().barTintColor = Colors.yellow
+
+        UITabBar.appearance().barTintColor = Colors.orange
         StartCurrency.dataSource = self
         StartCurrency.delegate = self
-=======
+
         UITabBar.appearance().barTintColor = Colors.green
->>>>>>> origin/master
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

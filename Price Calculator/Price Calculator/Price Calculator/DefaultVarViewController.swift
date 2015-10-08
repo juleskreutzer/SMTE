@@ -9,6 +9,35 @@
 import UIKit
 
 class DefaultVarViewController: UIViewController {
+    @IBOutlet weak var switcher: UISwitch!
+    
+    @IBOutlet weak var lblBrutoDist: UILabel!
+    @IBOutlet weak var txtBrutoDist: UITextField!
+    @IBOutlet weak var lblDiscount: UILabel!
+    @IBOutlet weak var txtDiscount: UITextField!
+    @IBOutlet weak var lblNettoDist: UILabel!
+    @IBOutlet weak var txtNettoDist: UITextField!
+    
+    @IBAction func makeChange(sender: AnyObject) {
+        if(switcher.on == true)
+        {
+            lblBrutoDist.hidden = true
+            txtBrutoDist.hidden = true
+            lblDiscount.hidden = true
+            txtDiscount.hidden = true
+            lblNettoDist.hidden = false
+            txtNettoDist.hidden = false
+        }
+        else if(switcher.on == false)
+        {
+            lblBrutoDist.hidden = false
+            txtBrutoDist.hidden = false
+            lblDiscount.hidden = true
+            txtDiscount.hidden = true
+            lblNettoDist.hidden = false
+            txtNettoDist.hidden = false
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
