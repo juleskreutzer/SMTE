@@ -17,10 +17,11 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         defaultVars.tintColor = Colors.green
         customVars.tintColor = Colors.green
-        self.view.backgroundColor = Colors.blue
-        UITabBar.appearance().barTintColor = Colors.yellow
-        UINavigationBar.appearance().barTintColor = Colors.green
-        // Do any additional setup after loading the view.
+        //defaultVars.backgroundColor = Colors.blue
+        //customVars.backgroundColor = Colors.blue
+        self.view.backgroundColor = UIColor.whiteColor()
+        navigationController?.navigationBar.barTintColor = Colors.green
+        tabBarController!.tabBar.barTintColor = Colors.orange
     }
 
     override func didReceiveMemoryWarning() {

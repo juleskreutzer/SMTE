@@ -12,7 +12,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBar.appearance().barTintColor = Colors.yellow
+        UITabBar.appearance().barTintColor = Colors.green
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
