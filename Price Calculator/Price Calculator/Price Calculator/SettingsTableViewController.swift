@@ -12,12 +12,15 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
 
     @IBOutlet weak var StartCurrency: UIPickerView!
     @IBOutlet weak var lblStartCurrency: UILabel!
+    @IBOutlet weak var EndCurrency: UIPickerView!
+    @IBOutlet weak var lblEndCurrency: UILabel!
     let pickerData = ["Euro","US Dollar","Pound","Belgian Euro","Australian Dollar"] // PLACEHOLDER CODE
     
     @IBOutlet weak var MainTable: UITableView!
     @IBOutlet weak var CurrencyCell1: UITableViewCell!
     @IBOutlet weak var CurrencyCell2: UITableViewCell!
     @IBOutlet weak var CurrencyCell3: UITableViewCell!
+    @IBOutlet weak var CurrencyCell4: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,8 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         UITabBar.appearance().barTintColor = Colors.orange
         StartCurrency.dataSource = self
         StartCurrency.delegate = self
+        EndCurrency.dataSource = self
+        EndCurrency.delegate = self
 
         UITabBar.appearance().barTintColor = Colors.green
         
@@ -53,7 +58,7 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         // #warning Incomplete implementation, return the number of rows
         
         switch(section){
-        case 0: return 3
+        case 0: return 4
         case 1: return 1
         case 2: return 2
         case 3: return 1
@@ -69,24 +74,35 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         //let indexPath = tableView.indexPathForSelectedRow();
         if (indexPath.row == 0 && indexPath.section == 0)
         {
-        CurrencyCell2.hidden = false
+            CurrencyCell2.hidden = false
+            CurrencyCell4.hidden = true
+        }
+        else if (indexPath.row == 2 && indexPath.section == 0)
+        {
+            CurrencyCell2.hidden = true
+            CurrencyCell4.hidden = false
         }
         else
         {
-        CurrencyCell2.hidden = true
+            CurrencyCell2.hidden = true
+            CurrencyCell4.hidden = true
         }
+        MainTable.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
         if (indexPath.row == 1 && indexPath.section == 0)
         {
-            return 176
+            if (CurrencyCell2.hidden == true) {return 1}
+            else {return 176}
         }
-        else
+        else if (indexPath.row == 3 && indexPath.section == 0)
         {
-            return 44
+            if (CurrencyCell4.hidden == true) {return 1}
+            else {return 176}
         }
+        else {return 44}
     }
 
     
@@ -160,7 +176,8 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        lblStartCurrency.text = pickerData[row]
+        if (pickerView == StartCurrency){lblStartCurrency.text = pickerData[row]}
+        else if (pickerView == EndCurrency){lblEndCurrency.text = pickerData[row]}
     }
 
 }
