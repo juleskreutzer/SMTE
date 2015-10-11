@@ -181,10 +181,10 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="K8n-NS-yHV">
-                        <barButtonItem key="rightBarButtonItem" title="?" id="LSK-uV-45K">
+                        <barButtonItem key="rightBarButtonItem" title="Calculate" id="LSK-uV-45K">
                             <color key="tintColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
-                                <action selector="showInfoNextStep:" destination="7s9-nk-wgY" id="zPh-e8-f7r"/>
+                                <segue destination="d9y-VD-din" kind="show" id="CFq-p4-u3I"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -194,7 +194,6 @@
                         <outlet property="lblBrutoDist" destination="KnE-pm-qn0" id="lCf-gx-8Js"/>
                         <outlet property="lblDiscount" destination="img-Ce-p7t" id="tyg-LW-byt"/>
                         <outlet property="lblNettoDist" destination="zqy-4o-zGR" id="Sj3-os-MKo"/>
-                        <outlet property="showCalculateOrInfo" destination="LSK-uV-45K" id="aGK-ep-IRw"/>
                         <outlet property="switcher" destination="8eR-LZ-rYQ" id="8Cy-Uo-VhF"/>
                         <outlet property="txtBrutoDist" destination="HgW-Cz-Jfb" id="hCj-Ut-ubM"/>
                         <outlet property="txtDiscountPercentage" destination="8Ud-OB-pBj" id="iue-li-xMG"/>
@@ -317,11 +316,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dtR-CR-M7S">
-                        <barButtonItem key="rightBarButtonItem" title="Calculate" id="Rc8-dy-MC8">
+                        <barButtonItem key="rightBarButtonItem" title="?" id="Rc8-dy-MC8">
                             <color key="tintColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
-                            <connections>
-                                <action selector="test:" destination="6Ke-gq-Uee" id="BsE-Kx-lzH"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -338,6 +334,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YzF-th-k39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2722" y="649"/>
+        </scene>
+        <!--Result-->
+        <scene sceneID="ulo-5A-Ljc">
+            <objects>
+                <viewController id="d9y-VD-din" customClass="ResultViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="alJ-dT-m5O"/>
+                        <viewControllerLayoutGuide type="bottom" id="OXM-ce-QAq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hdY-Il-Vf8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="€ 100, 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="633-yl-Z3K">
+                                <rect key="frame" x="20" y="233" width="560" height="134"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="60"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OXM-ce-QAq" firstAttribute="top" secondItem="633-yl-Z3K" secondAttribute="bottom" constant="184" id="7Wo-Oa-7He"/>
+                            <constraint firstItem="633-yl-Z3K" firstAttribute="top" secondItem="alJ-dT-m5O" secondAttribute="bottom" constant="169" id="QRz-RR-wci"/>
+                            <constraint firstItem="633-yl-Z3K" firstAttribute="leading" secondItem="hdY-Il-Vf8" secondAttribute="leadingMargin" id="VX3-Cg-drq"/>
+                            <constraint firstItem="633-yl-Z3K" firstAttribute="trailing" secondItem="hdY-Il-Vf8" secondAttribute="trailingMargin" id="r4Z-dJ-G1V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Result" id="DC8-uB-622">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="b2l-a6-RMb"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="resultLabel" destination="633-yl-Z3K" id="Lql-hv-nQy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9t9-ir-gLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3459" y="-20"/>
         </scene>
         <!--Item-->
         <scene sceneID="BNT-bI-cMS">

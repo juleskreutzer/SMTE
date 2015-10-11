@@ -74,27 +74,17 @@ class CustomVarViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func test(sender: AnyObject) {
-        if(switcher.on)
-        {
-            settings.setBool(false, forKey: "NettoPrice")
-        }
-        else
-        {
-            settings.setBool(true, forKey: "NettoPrice")
-        }
+    
+    func showError(message: String)
+    {
         
-        settings.setDouble(Double(txtDistPrice.text!)!, forKey: "BrutoDistPrice")
-        settings.setDouble(Double(txtDiscountPercentage.text!)!, forKey: "BrutoDiscPercentage")
-        settings.setDouble(Double(txtNettoDistPrice.text!)!, forKey: "NettoDistPrice")
-        
-        let alertController = UIAlertController(title: "Entered Values:", message: "BrutoDistPrice: " + String(settings.doubleForKey("BrutoDistPrice")), preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
         
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
+        alert.addAction(defaultAction)
         
-        presentViewController(alertController, animated: true, completion: nil)
-
+        presentViewController(alert, animated: true, completion: nil)
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.

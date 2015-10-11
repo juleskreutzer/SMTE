@@ -22,7 +22,8 @@ class DefaultVarViewController: UIViewController {
     @IBOutlet weak var discountSlider: UISlider!
     @IBOutlet weak var lblDiscount: UITextView!
     
-    @IBOutlet weak var showCalculateOrInfo: UIBarButtonItem!
+    var defaults = NSUserDefaults.standardUserDefaults()
+    
     @IBAction func makeChange(sender: AnyObject) {
         if(switcher.on == true)
         {
@@ -50,16 +51,6 @@ class DefaultVarViewController: UIViewController {
         var currentValue = Int(sender.value)
         txtDiscountPercentage.text = "\(currentValue)"
     }
-    @IBAction func showInfoNextStep(sender: AnyObject) {
-        
-        let alertController = UIAlertController(title: "Next Step", message: "Swipe from right to left to get to the next step.", preferredStyle: .Alert)
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        presentViewController(alertController, animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         makeChange(self)
@@ -85,6 +76,38 @@ class DefaultVarViewController: UIViewController {
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(switcher.on == true)
+        {
+            defaults.setBool(true, forKey: "isNettoPrice")
+            // we have a netto price now
+            if (txtNettoDist.text != nil || txtNettoDist.text != "")
+            {
+                let wrongPrice : String = txtNettoDist.text!
+                let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
+                let price : Float = Float(rightPrice)!
+                
+                defaults.setFloat(price, forKey: "nettoPrice")
+                print(defaults.floatForKey("nettoPrice"))
+            }
+            else{
+                showError("Please fill in the netto distributor price.")
+            }
+        }
+        else
+        {
+            showError("Switcher is off")
+        }
+    }
+    
+    func showError(message: String)
+    {
+        let alert = UIAlertController(title: "Oops..", message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        
+        presentViewController(alert, animated: true, completion: nil)    }
 
     
 

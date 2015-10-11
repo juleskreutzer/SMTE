@@ -20,6 +20,7 @@
 		F5CC0B6D1BBE855600ADD66F /* Price_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B6C1BBE855600ADD66F /* Price_CalculatorTests.swift */; };
 		F5CC0B7D1BBE8B3D00ADD66F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B7C1BBE8B3D00ADD66F /* StartViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F5CC0B7F1BBE979300ADD66F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B7E1BBE979300ADD66F /* Colors.swift */; settings = {ASSET_TAGS = (); }; };
+		F5F00A3D1BCAD8D500CBDC5E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F00A3C1BCAD8D500CBDC5E /* ResultViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		F5CC0B6E1BBE855600ADD66F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5CC0B7C1BBE8B3D00ADD66F /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		F5CC0B7E1BBE979300ADD66F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F5F00A3C1BCAD8D500CBDC5E /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				F5CC0B541BBE855600ADD66F /* AppDelegate.swift */,
 				F5CC0B561BBE855600ADD66F /* ViewController.swift */,
 				F5CC0B581BBE855600ADD66F /* Main.storyboard */,
+				F5F00A3C1BCAD8D500CBDC5E /* ResultViewController.swift */,
 				F5322E621BC7DDF300DDA24B /* CustomVarViewController.swift */,
 				F5322E601BC7A5C200DDA24B /* LoginViewController.swift */,
 				F5322E5E1BC6642900DDA24B /* DefaultVarViewController.swift */,
@@ -223,6 +226,7 @@
 				F5322E5F1BC6642900DDA24B /* DefaultVarViewController.swift in Sources */,
 				F5CC0B7F1BBE979300ADD66F /* Colors.swift in Sources */,
 				F5322E611BC7A5C200DDA24B /* LoginViewController.swift in Sources */,
+				F5F00A3D1BCAD8D500CBDC5E /* ResultViewController.swift in Sources */,
 				F5CC0B5D1BBE855600ADD66F /* Price_Calculator.xcdatamodeld in Sources */,
 				F5CC0B571BBE855600ADD66F /* ViewController.swift in Sources */,
 				F5CC0B551BBE855600ADD66F /* AppDelegate.swift in Sources */,
