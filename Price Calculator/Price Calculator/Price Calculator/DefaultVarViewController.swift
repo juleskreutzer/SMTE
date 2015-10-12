@@ -48,7 +48,7 @@ class DefaultVarViewController: UIViewController {
     }
 
     @IBAction func sliderValueChanged(sender: UISlider) {
-        var currentValue = Int(sender.value)
+        let currentValue = Int(sender.value)
         txtDiscountPercentage.text = "\(currentValue)"
     }
     override func viewDidLoad() {
@@ -57,6 +57,12 @@ class DefaultVarViewController: UIViewController {
         navigationController?.navigationItem.backBarButtonItem?.tintColor = UIColor.whiteColor()
         discountSlider.thumbTintColor = Colors.green
         discountSlider.tintColor = Colors.orange
+        
+        
+        
+        txtDiscountPercentage.text = String(defaults.floatForKey("discountPercentage")*100)
+        txtBrutoDist.text = String(defaults.floatForKey("brutoPrice"))
+        txtNettoDist.text = String(defaults.floatForKey("nettoPrice"))
 
         // Do any additional setup after loading the view.
     }
@@ -97,7 +103,30 @@ class DefaultVarViewController: UIViewController {
         }
         else
         {
-            showError("Switcher is off")
+            if(txtBrutoDist.text != nil || txtBrutoDist.text != "")
+            {
+                let wrongPrice : String = txtBrutoDist.text!
+                let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
+                let price : Float = Float(rightPrice)!
+                
+                defaults.setFloat(price, forKey: "brutoPrice")
+                print(defaults.floatForKey("brutoPrice"))
+            }
+            else
+            {
+                showError("Please fill in the distributor list price")
+            }
+            
+            if(txtDiscountPercentage.text != nil || txtDiscountPercentage.text != "")
+            {
+                let percentage : Float = Float(txtDiscountPercentage.text!)!/100
+                defaults.setFloat(percentage, forKey: "discountPercentage")
+                print(defaults.floatForKey("discountPercentage"))
+            }
+            else
+            {
+                showError("Please fill in a discount percentage");
+            }
         }
     }
     
