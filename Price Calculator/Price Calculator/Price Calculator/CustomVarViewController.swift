@@ -27,9 +27,27 @@ class CustomVarViewController: UIViewController {
         navigationController?.navigationItem.backBarButtonItem?.tintColor = UIColor.whiteColor()
         discountSlider.thumbTintColor = Colors.green
         discountSlider.tintColor = Colors.orange
+        
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe:"))
+        
+        rightSwipe.direction = .Left
+        view.addGestureRecognizer(rightSwipe)
 
         // Do any additional setup after loading the view.
     }
+    
+    // Handle swipes from right to left
+    // http://www.ioscreator.com/tutorials/detecting-swipe-gesture-tutorial-ios8-swift
+    func handleSwipe(sender: UISwipeGestureRecognizer)
+    {
+        if(sender.direction == .Left)
+        {
+            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SettingsTableViewController")
+            self.navigationController?.pushViewController(newViewController!, animated: true)
+        }
+        
+    }
+    
     @IBAction func sliderValueChanged(sender: UISlider) {
         let value = Int(sender.value)
         txtDiscountPercentage.text = "\(value)"
@@ -112,7 +130,6 @@ class CustomVarViewController: UIViewController {
                 showError("Please fill in a discount percentage");
             }
         }
-
     }
     
 

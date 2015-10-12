@@ -283,6 +283,7 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="dwY-L7-Gdu" firstAttribute="bottom" secondItem="IMC-mK-qvl" secondAttribute="bottom" id="2ae-80-Tc5"/>
                             <constraint firstItem="q5d-gB-U37" firstAttribute="leading" secondItem="nPT-y1-9IV" secondAttribute="leading" id="34H-ZP-jnv"/>
@@ -314,6 +315,9 @@
                             <constraint firstItem="Fti-mp-G4q" firstAttribute="top" secondItem="dwY-L7-Gdu" secondAttribute="bottom" constant="9" id="vCQ-Oi-0WR"/>
                             <constraint firstItem="ljY-Tq-iqm" firstAttribute="trailing" secondItem="ePi-01-YNH" secondAttribute="trailingMargin" id="x4w-FR-HT3"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GDb-Ho-5RH" appends="YES" id="QUo-uf-rvb"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="dtR-CR-M7S">
                         <barButtonItem key="rightBarButtonItem" title="?" id="Rc8-dy-MC8">
@@ -332,6 +336,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YzF-th-k39" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="GDb-Ho-5RH"/>
             </objects>
             <point key="canvasLocation" x="2722" y="649"/>
         </scene>
@@ -377,7 +382,7 @@
         <!--Item-->
         <scene sceneID="BNT-bI-cMS">
             <objects>
-                <tableViewController id="w7d-Cf-i6z" customClass="SettingsTableViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsTableViewController" id="w7d-Cf-i6z" customClass="SettingsTableViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="mum-hn-UF8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
