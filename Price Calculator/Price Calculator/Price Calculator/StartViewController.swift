@@ -22,6 +22,26 @@ class StartViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         navigationController?.navigationBar.barTintColor = Colors.green
         tabBarController!.tabBar.barTintColor = Colors.orange
+        var defaults = NSUserDefaults.standardUserDefaults()
+        
+        // Retrieve the exchange data from fixer.io
+        let endpointEUR = NSURL(string: "https://api.fixer.io/latest?base=EUR")
+        let endpointUSD = NSURL(string: "https://api.fixer.io/latest?base=USD")
+        
+        var dataEUR = NSData(contentsOfURL: endpointEUR!)
+        var dataUSD = NSData(contentsOfURL: endpointUSD!)
+        
+        if(dataEUR != nil)
+        {
+            defaults.setObject(dataEUR, forKey: "exchangeEUR")
+        }
+        
+        if(dataUSD != nil)
+        {
+            defaults.setObject(dataUSD, forKey: "exchangeUSD")
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
