@@ -16,6 +16,7 @@ class Step3ViewController: UIViewController {
     @IBOutlet weak var taxSlider: UISlider!
     @IBOutlet weak var correctionSlider: UISlider!
     
+    var defaults = NSUserDefaults.standardUserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,8 +42,31 @@ class Step3ViewController: UIViewController {
     {
         if(sender.direction == .Left)
         {
-            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Step4ViewController")
-            self.navigationController?.pushViewController(newViewController!, animated: true)
+            if(txtTax.text?.isEmpty == true)
+            {
+                showError("Please fill in the import tax")
+            }
+            else if(txtCorrection.text?.isEmpty == true)
+            {
+                showError("Please fill in the exchange rate correction")
+            }
+            else
+            {
+                let wrongTax = txtTax.text!
+                let rightTax = wrongTax.stringByReplacingOccurrencesOfString(",", withString: ".")
+                let tax : Float = Float(rightTax)!
+                
+                let wrongCorrection = txtCorrection.text!
+                let rightCorrection = wrongCorrection.stringByReplacingOccurrencesOfString(",", withString: ".")
+                let correction : Float = Float(rightCorrection)!
+                
+                defaults.setFloat(tax, forKey: "tax")
+                defaults.setFloat(correction, forKey: "correction")
+                let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Step4ViewController")
+                self.navigationController?.pushViewController(newViewController!, animated: true)
+                
+            }
+            
         }
         
     }
@@ -66,6 +90,18 @@ class Step3ViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
+    }
+    
+    func showError(message: String)
+    {
+        
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(defaultAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
+        
     }
 
     /*

@@ -12,6 +12,8 @@ class Step4ViewController: UIViewController {
     @IBOutlet weak var txtMargin: UITextField!
 
     @IBOutlet weak var sliderMargin: UISlider!
+    
+    var defaults = NSUserDefaults.standardUserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,9 +34,22 @@ class Step4ViewController: UIViewController {
     
     func ShowResultView()
     {
-        let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController")
-        self.navigationController?.pushViewController(newViewController!, animated: true)
-
+        
+        if(txtMargin.text?.isEmpty == true)
+        {
+            showError("Please fill in the desired margin")
+        }
+        else
+        {
+            let wrongMargin = txtMargin.text!
+            let rightMargin = wrongMargin.stringByReplacingOccurrencesOfString(",", withString: ".")
+            let margin : Float = Float(rightMargin)!
+                
+            defaults.setFloat(margin, forKey: "margin")
+            
+            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController")
+            self.navigationController?.pushViewController(newViewController!, animated: true)
+        }
     }
     
     @IBAction func SliderMarginChanged(sender: UISlider) {
@@ -52,6 +67,19 @@ class Step4ViewController: UIViewController {
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
     }
+    
+    func showError(message: String)
+    {
+        
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(defaultAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
+        
+    }
+
 
 
     /*
