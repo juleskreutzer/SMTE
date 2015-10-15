@@ -10,8 +10,19 @@ import UIKit
 
 class Step3ViewController: UIViewController {
 
+    @IBOutlet weak var txtTax: UITextField!
+    @IBOutlet weak var txtCorrection: UITextField!
+    
+    @IBOutlet weak var taxSlider: UISlider!
+    @IBOutlet weak var correctionSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        taxSlider.thumbTintColor = Colors.green
+        taxSlider.tintColor = Colors.orange
+        correctionSlider.thumbTintColor = Colors.green
+        correctionSlider.tintColor = Colors.orange
         
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe:"))
         
@@ -36,6 +47,26 @@ class Step3ViewController: UIViewController {
         
     }
     
+    @IBAction func TaxSliderChanged(sender: UISlider) {
+        let value = Int(sender.value)
+        txtTax.text = "\(value)"
+    }
+
+    @IBAction func CorrectionSliderChanged(sender: UISlider) {
+        var value = Int(sender.value)
+        txtCorrection.text = "\(value)"
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
 
     /*
     // MARK: - Navigation

@@ -9,9 +9,14 @@
 import UIKit
 
 class Step4ViewController: UIViewController {
+    @IBOutlet weak var txtMargin: UITextField!
 
+    @IBOutlet weak var sliderMargin: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sliderMargin.thumbTintColor = Colors.green
+        sliderMargin.tintColor = Colors.orange
 
         let calculateButton = UIBarButtonItem(title: "Calculate", style: .Plain, target: self, action: Selector("ShowResultView"))
         navigationItem.rightBarButtonItem = calculateButton
@@ -32,6 +37,22 @@ class Step4ViewController: UIViewController {
 
     }
     
+    @IBAction func SliderMarginChanged(sender: UISlider) {
+        let value = Int(sender.value)
+        txtMargin.text = "\(value)"
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+
 
     /*
     // MARK: - Navigation

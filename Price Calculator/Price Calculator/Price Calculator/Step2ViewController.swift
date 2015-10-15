@@ -16,7 +16,7 @@ class Step2ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDa
     
     @IBOutlet weak var CalculateToPicker: UIPickerView!
     @IBAction func updateSlider(sender: UISlider) {
-        var value = sender.value;
+        var value = Int(sender.value)
         
         shippingPercentage.text = "\(value)"
     }
@@ -25,6 +25,8 @@ class Step2ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDa
     */
     
     var StartWithData = ["USD"]
+    
+    var defaults = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,8 +60,30 @@ class Step2ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDa
     {
         if(sender.direction == .Left)
         {
-            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Step3ViewController")
-            self.navigationController?.pushViewController(newViewController!, animated: true)
+            if(shippingPercentage.text?.isEmpty == true)
+            {
+                showError("Please fill in the shipping cost percentage")
+            }
+            else
+            {
+                let wrongPercentage : String = shippingPercentage.text!
+                let rightPercentage = wrongPercentage.stringByReplacingOccurrencesOfString(",", withString: ".")
+                let percentage : Float = Float(rightPercentage)!
+                
+                defaults.setFloat(percentage, forKey: "shippingCost")
+                
+                let startWithInt = StartWithPicker.selectedRowInComponent(0)
+                let startWith = StartWithData[startWithInt]
+                
+                let calculateToInt = CalculateToPicker.selectedRowInComponent(0)
+                let calculateTo = StartWithData[calculateToInt]
+                print("\(startWith)\n\(calculateTo)")
+                
+                defaults.setObject(startWith , forKey: "startWith")
+                defaults.setObject(calculateTo , forKey: "calculateTo")
+                let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Step3ViewController")
+                self.navigationController?.pushViewController(newViewController!, animated: true)
+            }
         }
         
     }
@@ -89,6 +113,18 @@ class Step2ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDa
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return StartWithData[row]
+    }
+    
+    func showError(message: String)
+    {
+        
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(defaultAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
+        
     }
     
     
