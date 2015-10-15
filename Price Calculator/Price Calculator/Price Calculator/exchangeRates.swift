@@ -13,23 +13,21 @@ class exchangeRates {
     Retrieve the exchange rates from fixer.io
     */
     
+    static var defaults = NSUserDefaults.standardUserDefaults()
+    
     static func getExchangeRates() {
         // Get the URL for the data
-        let endpointEUR = NSURL(string: "https://api.fixer.io/latest?base=USD&symbols=EUR")
-        let data : NSData = NSData(contentsOfURL: endpointEUR!)!
+        let endpointEUR = NSURL(string: "https://api.fixer.io/latest?base=EUR")
+        let endpointUSD = NSURL(string: "https://api.fixer.io/latest?base=USD");
+        let dataEUR : NSData = NSData(contentsOfURL: endpointEUR!)!
+        let dataUSD : NSData = NSData(contentsOfURL: endpointUSD!)!
         
-        let dict : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! NSDictionary)
-        
-        /*
-        for(var i = 0; i < (dict.valueForKey("rates") as! NSArray).count; i++)
-        {
-            
-        }
-*/
+        let dictEUR : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(dataEUR, options: .MutableContainers) as! NSDictionary)
+        let dictUSD : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(dataUSD, options: .MutableContainers) as! NSDictionary)
         
         
-        
-        
+        defaults.setValue(dictEUR.objectForKey("rates"), forKey: "EURrates")
+        defaults.setValue(dictUSD.objectForKey("rates"), forKey: "USDrates")
     }
     
 }

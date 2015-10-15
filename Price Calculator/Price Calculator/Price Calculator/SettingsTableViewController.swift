@@ -38,6 +38,9 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         
         leftSwipe.direction = .Right
         view.addGestureRecognizer(leftSwipe)
+        CurrencyCell2.hidden = true
+        CurrencyCell4.hidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,8 +71,7 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        tableView.endEditing(true) // dismiss the keyboard when clicking on another table cell
-        
+        //let indexPath = tableView.indexPathForSelectedRow();
         if (indexPath.row == 0 && indexPath.section == 0)
         {
             CurrencyCell2.hidden = false
