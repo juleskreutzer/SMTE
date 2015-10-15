@@ -9,7 +9,7 @@
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartViewController" id="BYZ-38-t0r" customClass="StartViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -38,6 +38,7 @@
                             </button>
                         </subviews>
                         <animations/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="IHP-mr-xhF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0bd-1c-2op"/>
                             <constraint firstItem="S8g-g5-CyC" firstAttribute="trailing" secondItem="IHP-mr-xhF" secondAttribute="trailing" id="SNG-Az-nmI"/>
@@ -46,6 +47,9 @@
                             <constraint firstItem="IHP-mr-xhF" firstAttribute="leading" secondItem="S8g-g5-CyC" secondAttribute="leading" id="dHV-qu-NKO"/>
                             <constraint firstItem="IHP-mr-xhF" firstAttribute="top" secondItem="S8g-g5-CyC" secondAttribute="bottom" constant="71" id="yxB-qv-FoV"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="04O-rs-5cA" appends="YES" id="SLh-Aw-HqB"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Ez9-DH-EJ9">
                         <barButtonItem key="leftBarButtonItem" title="Login" id="c3M-O7-pIC">
@@ -67,6 +71,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="04O-rs-5cA"/>
             </objects>
             <point key="canvasLocation" x="2004" y="313"/>
         </scene>
@@ -500,12 +505,14 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shipping Cost (in %)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-8s-v2W">
                                                     <rect key="frame" x="17" y="11" width="165" height="21"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzv-JH-rTI">
                                                     <rect key="frame" x="296" y="7" width="150" height="30"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
@@ -605,6 +612,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAm-kN-l2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="lu8-rT-cwS"/>
             </objects>
             <point key="canvasLocation" x="526" y="1138"/>
         </scene>

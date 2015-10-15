@@ -20,10 +20,12 @@ class exchangeRates {
         
         let dict : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! NSDictionary)
         
+        /*
         for(var i = 0; i < (dict.valueForKey("rates") as! NSArray).count; i++)
         {
             
         }
+*/
         
         
         

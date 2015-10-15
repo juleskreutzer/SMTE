@@ -26,11 +26,26 @@ class StartViewController: UIViewController {
         
         // Retrieve the exchange data from fixer.io
         exchangeRates.getExchangeRates()
+        
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe:"))
+        
+        rightSwipe.direction = .Left
+        view.addGestureRecognizer(rightSwipe)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func handleSwipe(sender : UISwipeGestureRecognizer)
+    {
+        if(sender.direction == .Right)
+        {
+            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SettingsTableViewController")
+            self.navigationController?.pushViewController(newViewController!, animated: true)
+
+        }
     }
     
 
