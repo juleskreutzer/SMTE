@@ -10,6 +10,7 @@
 		F5322E5F1BC6642900DDA24B /* DefaultVarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5322E5E1BC6642900DDA24B /* DefaultVarViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F5322E611BC7A5C200DDA24B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5322E601BC7A5C200DDA24B /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F5322E631BC7DDF300DDA24B /* CustomVarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5322E621BC7DDF300DDA24B /* CustomVarViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F56078701BCCFED300D567C1 /* exchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F560786F1BCCFED300D567C1 /* exchangeRates.swift */; settings = {ASSET_TAGS = (); }; };
 		F5C34E791BC65EA400BBD588 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C34E781BC65EA400BBD588 /* SettingsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F5CC0B551BBE855600ADD66F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B541BBE855600ADD66F /* AppDelegate.swift */; };
 		F5CC0B571BBE855600ADD66F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B561BBE855600ADD66F /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		F5322E5E1BC6642900DDA24B /* DefaultVarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultVarViewController.swift; sourceTree = "<group>"; };
 		F5322E601BC7A5C200DDA24B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F5322E621BC7DDF300DDA24B /* CustomVarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVarViewController.swift; sourceTree = "<group>"; };
+		F560786F1BCCFED300D567C1 /* exchangeRates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exchangeRates.swift; sourceTree = "<group>"; };
 		F5C34E781BC65EA400BBD588 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		F5CC0B511BBE855600ADD66F /* Price Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Price Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CC0B541BBE855600ADD66F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				F5CC0B561BBE855600ADD66F /* ViewController.swift */,
 				F5CC0B581BBE855600ADD66F /* Main.storyboard */,
 				F5F00A3C1BCAD8D500CBDC5E /* ResultViewController.swift */,
+				F560786F1BCCFED300D567C1 /* exchangeRates.swift */,
 				F5322E621BC7DDF300DDA24B /* CustomVarViewController.swift */,
 				F5322E601BC7A5C200DDA24B /* LoginViewController.swift */,
 				F5322E5E1BC6642900DDA24B /* DefaultVarViewController.swift */,
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56078701BCCFED300D567C1 /* exchangeRates.swift in Sources */,
 				F5CC0B7D1BBE8B3D00ADD66F /* StartViewController.swift in Sources */,
 				F5C34E791BC65EA400BBD588 /* SettingsTableViewController.swift in Sources */,
 				F5322E5F1BC6642900DDA24B /* DefaultVarViewController.swift in Sources */,

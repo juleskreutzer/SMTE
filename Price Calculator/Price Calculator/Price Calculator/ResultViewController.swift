@@ -18,6 +18,8 @@ class ResultViewController: UIViewController {
         var defaults = NSUserDefaults.standardUserDefaults()
         print(defaults.objectForKey("exchangeEUR"))
         print(defaults.objectForKey("exchangeUSD"))
+        
+        
 
         // Do any additional setup after loading the view.
     }
