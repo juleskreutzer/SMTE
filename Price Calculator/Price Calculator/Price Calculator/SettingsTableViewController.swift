@@ -14,6 +14,8 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     @IBOutlet weak var lblStartCurrency: UILabel!
     @IBOutlet weak var EndCurrency: UIPickerView!
     @IBOutlet weak var lblEndCurrency: UILabel!
+    @IBOutlet weak var tbShippingCost: UITextField!
+    
     let pickerData = ["Euro","US Dollar","Pound","Belgian Euro","Australian Dollar"] // PLACEHOLDER CODE
     
     @IBOutlet weak var MainTable: UITableView!
@@ -32,14 +34,6 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         EndCurrency.delegate = self
 
         UITabBar.appearance().barTintColor = Colors.green
-        
-
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,7 +61,6 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         }
     }
     
-    var enabledCategory:Int = 0 // you could add i base value
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -82,7 +75,7 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
             CurrencyCell2.hidden = true
             CurrencyCell4.hidden = false
         }
-        else
+        else 
         {
             CurrencyCell2.hidden = true
             CurrencyCell4.hidden = true
@@ -103,6 +96,17 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
             else {return 176}
         }
         else {return 44}
+    }
+    
+    @IBAction func tbShippingCostOnChange(sender: UITextField) {
+        if (Int(tbShippingCost.text!) < 0)
+        {
+            tbShippingCost.text = "0"
+        }
+        else if (Int(tbShippingCost.text!) > 100)
+        {
+            tbShippingCost.text = "100"
+        }
     }
 
     

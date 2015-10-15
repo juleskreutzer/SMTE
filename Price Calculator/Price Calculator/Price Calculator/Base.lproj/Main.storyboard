@@ -398,22 +398,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start with: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raE-hG-iY3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start with: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raE-hG-iY3">
                                                     <rect key="frame" x="8" y="14" width="148" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="148" id="UOr-tM-hAi"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vns-lp-aK0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vns-lp-aK0">
                                                     <rect key="frame" x="279" y="14" width="111" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="111" id="6H8-kE-kmr"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="Vns-lp-aK0" firstAttribute="baseline" secondItem="raE-hG-iY3" secondAttribute="baseline" id="1yJ-3D-hJk"/>
+                                                <constraint firstItem="Vns-lp-aK0" firstAttribute="bottom" secondItem="Anz-N9-QIv" secondAttribute="bottomMargin" id="UHP-ZD-BMO"/>
+                                                <constraint firstItem="Vns-lp-aK0" firstAttribute="leading" secondItem="Anz-N9-QIv" secondAttribute="leading" constant="279" id="dEg-bm-xDo"/>
+                                                <constraint firstItem="raE-hG-iY3" firstAttribute="leading" secondItem="Anz-N9-QIv" secondAttribute="leadingMargin" id="vW6-OW-oMd"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
@@ -466,7 +478,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="175.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dUv-z1-bU7">
+                                                <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dUv-z1-bU7">
                                                     <rect key="frame" x="0.0" y="-20" width="600" height="216"/>
                                                     <animations/>
                                                 </pickerView>
@@ -485,6 +497,22 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eNP-0s-00Z" id="AVx-wn-boa">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shipping Cost (in %)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-8s-v2W">
+                                                    <rect key="frame" x="17" y="11" width="165" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzv-JH-rTI">
+                                                    <rect key="frame" x="296" y="7" width="150" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <action selector="tbShippingCostOnChange:" destination="w7d-Cf-i6z" eventType="editingDidEnd" id="dBE-gU-ZE5"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -570,6 +598,7 @@
                         <outlet property="StartCurrency" destination="SFE-iR-8jP" id="bO9-fN-AZ2"/>
                         <outlet property="lblEndCurrency" destination="cJB-rs-cmw" id="Tq0-aA-TPI"/>
                         <outlet property="lblStartCurrency" destination="Vns-lp-aK0" id="Dd7-Zh-NOJ"/>
+                        <outlet property="tbShippingCost" destination="vzv-JH-rTI" id="EJi-g9-s2L"/>
                         <outletCollection property="StartCurrency" destination="SFE-iR-8jP" collectionClass="NSMutableArray" id="8Gt-zm-Cpe"/>
                         <outletCollection property="StartCurrency" destination="SFE-iR-8jP" collectionClass="NSMutableArray" id="S24-gd-ddB"/>
                         <outletCollection property="StartCurrency" destination="SFE-iR-8jP" collectionClass="NSMutableArray" id="xvx-kA-ECl"/>
