@@ -26,6 +26,9 @@ class StartViewController: UIViewController {
         
         // Retrieve the exchange data from fixer.io
         exchangeRates.getExchangeRates()
+        var data = defaults.objectForKey("USDrates")?.objectForKey("AUD")
+        print(data);
+        print(defaults.objectForKey("EURrates")?.objectForKey("USD"))
         
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe:"))
         
