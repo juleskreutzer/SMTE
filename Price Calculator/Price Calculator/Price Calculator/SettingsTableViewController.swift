@@ -34,6 +34,13 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         EndCurrency.delegate = self
 
         UITabBar.appearance().barTintColor = Colors.green
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe:"))
+        
+        leftSwipe.direction = .Right
+        view.addGestureRecognizer(leftSwipe)
+        CurrencyCell2.hidden = true
+        CurrencyCell4.hidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,6 +114,16 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         {
             tbShippingCost.text = "100"
         }
+    }
+    
+    func handleSwipe(sender: UISwipeGestureRecognizer)
+    {
+        if(sender.direction == .Right)
+        {
+            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("StartViewController")
+            self.navigationController?.pushViewController(newViewController!, animated: true)
+        }
+        
     }
 
     
