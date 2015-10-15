@@ -15,6 +15,9 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     @IBOutlet weak var EndCurrency: UIPickerView!
     @IBOutlet weak var lblEndCurrency: UILabel!
     @IBOutlet weak var tbShippingCost: UITextField!
+    @IBOutlet weak var tbExchangeRateCorrection: UITextField!
+    @IBOutlet weak var tbImportTax: UITextField!
+    @IBOutlet weak var tbProfitMargin: UITextField!
     
     let pickerData = ["Euro","US Dollar","Pound","Belgian Euro","Australian Dollar"] // PLACEHOLDER CODE
     
@@ -23,6 +26,8 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     @IBOutlet weak var CurrencyCell2: UITableViewCell!
     @IBOutlet weak var CurrencyCell3: UITableViewCell!
     @IBOutlet weak var CurrencyCell4: UITableViewCell!
+    
+    var defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +39,19 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         EndCurrency.delegate = self
 
         UITabBar.appearance().barTintColor = Colors.green
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe:"))
-        
-        leftSwipe.direction = .Right
-        view.addGestureRecognizer(leftSwipe)
         CurrencyCell2.hidden = true
         CurrencyCell4.hidden = true
+        
+        defaults.setFloat(4.5, forKey: "nettoPrice")
+        
+        lblStartCurrency.text = defaults.stringForKey("DefaultStartCurrency")
+        lblEndCurrency.text = defaults.stringForKey("DefaultEndCurrency")
+        tbShippingCost.text = NSString(format: "%.2f", defaults.floatForKey("DefaultShippingCost")) as String
+        tbExchangeRateCorrection.text = NSString(format: "%.2f", defaults.floatForKey("DefaultExchangeRateCorrection")) as String
+        tbImportTax.text = NSString(format: "%.2f", defaults.floatForKey("DefaultImportTax")) as String
+        tbProfitMargin.text = NSString(format: "%.2f", defaults.floatForKey("DefaultProfitMargin")) as String
+
+        //let rightPrice = Float(tbShippingCost.text!.stringByReplacingOccurrencesOfString(",", withString: "."))!
         
     }
 
@@ -63,15 +75,15 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         case 1: return 1
         case 2: return 2
         case 3: return 1
-        case 4: return 2
-        default: return 1
+        case 4: return 3
+        default: return 0
         }
     }
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        //let indexPath = tableView.indexPathForSelectedRow();
+        tableView.endEditing(true) // dismiss the keyboard when clicking on another table cell
         if (indexPath.row == 0 && indexPath.section == 0)
         {
             CurrencyCell2.hidden = false
@@ -116,15 +128,6 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         }
     }
     
-    func handleSwipe(sender: UISwipeGestureRecognizer)
-    {
-        if(sender.direction == .Right)
-        {
-            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("StartViewController")
-            self.navigationController?.pushViewController(newViewController!, animated: true)
-        }
-        
-    }
 
     
     /*
