@@ -42,7 +42,7 @@ class CustomVarViewController: UIViewController {
     {
         if(sender.direction == .Left)
         {
-            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SettingsTableViewController")
+            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Step2ViewController")
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
         

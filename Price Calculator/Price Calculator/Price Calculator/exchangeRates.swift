@@ -15,7 +15,7 @@ class exchangeRates {
     
     static var defaults = NSUserDefaults.standardUserDefaults()
     
-    static func getExchangeRates() {
+    static func getExchangeRates() -> Bool {
         // Get the URL for the data
         let endpointEUR = NSURL(string: "https://api.fixer.io/latest?base=EUR")
         let endpointUSD = NSURL(string: "https://api.fixer.io/latest?base=USD");
@@ -25,9 +25,25 @@ class exchangeRates {
         let dictEUR : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(dataEUR, options: .MutableContainers) as! NSDictionary)
         let dictUSD : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(dataUSD, options: .MutableContainers) as! NSDictionary)
         
+        if(dictEUR != nil)
+        {
+            defaults.setValue(dictEUR.objectForKey("rates"), forKey: "EURrates")
+            return true
+        }
+        else
+        {
+            return false
+        }
         
-        defaults.setValue(dictEUR.objectForKey("rates"), forKey: "EURrates")
-        defaults.setValue(dictUSD.objectForKey("rates"), forKey: "USDrates")
+        if(dictUSD != nil)
+        {
+            defaults.setValue(dictUSD.objectForKey("rates"), forKey: "USDrates")
+            return true
+        }
+        else
+        {
+            return false
+        }
     }
     
 }
