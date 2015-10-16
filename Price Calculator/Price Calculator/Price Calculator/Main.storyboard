@@ -683,7 +683,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start with: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raE-hG-iY3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start with: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raE-hG-iY3">
                                                     <rect key="frame" x="8" y="14" width="148" height="21"/>
                                                     <animations/>
                                                     <constraints>
@@ -692,13 +692,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="UOr-tM-hAi"/>
-                                                        </mask>
-                                                    </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vns-lp-aK0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vns-lp-aK0">
                                                     <rect key="frame" x="279" y="14" width="111" height="21"/>
                                                     <animations/>
                                                     <constraints>
@@ -707,32 +702,15 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="6H8-kE-kmr"/>
-                                                        </mask>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="Vns-lp-aK0" firstAttribute="baseline" secondItem="raE-hG-iY3" secondAttribute="baseline" id="1yJ-3D-hJk"/>
-                                                <constraint firstItem="Vns-lp-aK0" firstAttribute="top" secondItem="Anz-N9-QIv" secondAttribute="topMargin" constant="7" id="CXE-J1-LGK"/>
                                                 <constraint firstItem="Vns-lp-aK0" firstAttribute="bottom" secondItem="Anz-N9-QIv" secondAttribute="bottomMargin" id="UHP-ZD-BMO"/>
-                                                <constraint firstItem="raE-hG-iY3" firstAttribute="leading" secondItem="Anz-N9-QIv" secondAttribute="leadingMargin" constant="10" id="V50-Ge-3WF"/>
-                                                <constraint firstItem="raE-hG-iY3" firstAttribute="top" secondItem="Anz-N9-QIv" secondAttribute="topMargin" constant="7" id="bqm-Uf-1C5"/>
                                                 <constraint firstItem="Vns-lp-aK0" firstAttribute="leading" secondItem="Anz-N9-QIv" secondAttribute="leading" constant="279" id="dEg-bm-xDo"/>
                                                 <constraint firstItem="raE-hG-iY3" firstAttribute="leading" secondItem="Anz-N9-QIv" secondAttribute="leadingMargin" id="vW6-OW-oMd"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Vns-lp-aK0" secondAttribute="trailing" constant="10" id="yIJ-1m-yWb"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="vW6-OW-oMd"/>
-                                                    <exclude reference="1yJ-3D-hJk"/>
-                                                    <exclude reference="UHP-ZD-BMO"/>
-                                                    <exclude reference="dEg-bm-xDo"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
@@ -743,16 +721,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="175.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFE-iR-8jP">
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFE-iR-8jP">
                                                     <rect key="frame" x="0.0" y="-20" width="600" height="216"/>
                                                     <animations/>
                                                 </pickerView>
                                             </subviews>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstItem="SFE-iR-8jP" firstAttribute="leading" secondItem="X5j-u0-KDW" secondAttribute="leadingMargin" constant="10" id="gOM-Mu-ult"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="SFE-iR-8jP" secondAttribute="trailing" constant="10" id="lNR-IZ-6cc"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
@@ -763,14 +737,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Calculate to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQf-Ch-S0Z">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calculate to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQf-Ch-S0Z">
                                                     <rect key="frame" x="8" y="14" width="177" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJB-rs-cmw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJB-rs-cmw">
                                                     <rect key="frame" x="279" y="11" width="114" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -779,18 +753,6 @@
                                                 </label>
                                             </subviews>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstItem="cJB-rs-cmw" firstAttribute="top" secondItem="ynX-3X-pBU" secondAttribute="topMargin" constant="7" id="0y0-YD-LzG"/>
-                                                <constraint firstItem="wQf-Ch-S0Z" firstAttribute="leading" secondItem="ynX-3X-pBU" secondAttribute="leadingMargin" constant="10" id="Jiu-Aw-gJs"/>
-                                                <constraint firstItem="wQf-Ch-S0Z" firstAttribute="top" secondItem="ynX-3X-pBU" secondAttribute="topMargin" constant="7" id="LOC-ne-bEt"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="cJB-rs-cmw" secondAttribute="trailing" constant="10" id="ex4-y0-hpJ"/>
-                                                <constraint firstItem="wQf-Ch-S0Z" firstAttribute="leading" secondItem="ynX-3X-pBU" secondAttribute="leadingMargin" id="mOu-Im-0Zm"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="mOu-Im-0Zm"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
@@ -801,16 +763,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="175.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dUv-z1-bU7">
+                                                <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dUv-z1-bU7">
                                                     <rect key="frame" x="0.0" y="-20" width="600" height="216"/>
                                                     <animations/>
                                                 </pickerView>
                                             </subviews>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="dUv-z1-bU7" secondAttribute="trailing" constant="10" id="FGe-WM-VIF"/>
-                                                <constraint firstItem="dUv-z1-bU7" firstAttribute="leading" secondItem="LL6-f1-zSt" secondAttribute="leadingMargin" constant="10" id="RS5-Cx-mEN"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
@@ -825,27 +783,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shipping Cost (in %)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-8s-v2W">
-                                                    <rect key="frame" x="8" y="0.0" width="165" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shipping Cost (in %)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-8s-v2W">
+                                                    <rect key="frame" x="17" y="11" width="165" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzv-JH-rTI">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzv-JH-rTI">
                                                     <rect key="frame" x="296" y="7" width="75" height="30"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="JJf-bC-x1L"/>
+                                                        <constraint firstAttribute="width" constant="150" id="JJf-bC-x1L"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="f5d-Zt-rEs"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="f5d-Zt-rEs"/>
-                                                        </mask>
-                                                    </variation>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
                                                         <action selector="tbShippingCostOnChange:" destination="w7d-Cf-i6z" eventType="editingDidEnd" id="dBE-gU-ZE5"/>
                                                     </connections>
@@ -853,10 +806,7 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="Zau-8s-v2W" firstAttribute="leading" secondItem="AVx-wn-boa" secondAttribute="leadingMargin" constant="10" id="Bx4-TO-XJx"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="vzv-JH-rTI" secondAttribute="trailing" constant="20" id="d04-ff-DVY"/>
-                                                <constraint firstItem="Zau-8s-v2W" firstAttribute="top" secondItem="AVx-wn-boa" secondAttribute="topMargin" constant="7" id="rEd-7S-xkV"/>
-                                                <constraint firstItem="vzv-JH-rTI" firstAttribute="top" secondItem="AVx-wn-boa" secondAttribute="topMargin" id="z4B-cq-D1u"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vzv-JH-rTI" secondAttribute="trailing" constant="50" id="d04-ff-DVY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -872,37 +822,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-<<<<<<< HEAD:Price Calculator/Price Calculator/Price Calculator/Base.lproj/Main.storyboard
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Exchange Rate Correction (in %)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GP5-ed-nj8">
-                                                    <rect key="frame" x="8" y="14" width="210" height="21"/>
-=======
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exchange Rate Correction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GP5-ed-nj8">
                                                     <rect key="frame" x="18" y="11" width="210" height="21"/>
                                                     <animations/>
->>>>>>> origin/master:Price Calculator/Price Calculator/Price Calculator/Main.storyboard
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-<<<<<<< HEAD:Price Calculator/Price Calculator/Price Calculator/Base.lproj/Main.storyboard
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3K-eF-Sjb">
-                                                    <rect key="frame" x="294" y="5" width="75" height="30"/>
-=======
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3K-eF-Sjb">
                                                     <rect key="frame" x="294" y="5" width="150" height="30"/>
                                                     <animations/>
->>>>>>> origin/master:Price Calculator/Price Calculator/Price Calculator/Main.storyboard
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="0NX-7U-W5Y"/>
-                                                        <constraint firstAttribute="width" constant="75" id="g1v-b5-lEt"/>
+                                                        <constraint firstAttribute="width" constant="150" id="g1v-b5-lEt"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="0NX-7U-W5Y"/>
-                                                        </mask>
-                                                    </variation>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
                                                         <action selector="tbShippingCostOnChange:" destination="w7d-Cf-i6z" eventType="editingDidEnd" id="Fl2-g3-xF4"/>
                                                     </connections>
@@ -910,22 +845,10 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="GP5-ed-nj8" firstAttribute="leading" secondItem="SUz-c2-izF" secondAttribute="leadingMargin" constant="10" id="B3m-q0-MPz"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="J3K-eF-Sjb" secondAttribute="trailing" constant="20" id="Ysv-1m-FTg"/>
-                                                <constraint firstItem="J3K-eF-Sjb" firstAttribute="leading" secondItem="GP5-ed-nj8" secondAttribute="trailing" constant="10" id="Zgx-sA-5Mp"/>
-                                                <constraint firstItem="GP5-ed-nj8" firstAttribute="top" secondItem="SUz-c2-izF" secondAttribute="topMargin" constant="7" id="hhg-gK-MfM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="J3K-eF-Sjb" secondAttribute="trailing" constant="50" id="Ysv-1m-FTg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="J3K-eF-Sjb" secondAttribute="trailing" constant="148" id="kuw-Nm-wT2"/>
-                                                <constraint firstItem="J3K-eF-Sjb" firstAttribute="leading" secondItem="GP5-ed-nj8" secondAttribute="trailing" constant="66" id="rzq-X4-l3t"/>
-                                                <constraint firstItem="J3K-eF-Sjb" firstAttribute="top" secondItem="SUz-c2-izF" secondAttribute="topMargin" id="u3N-EZ-dak"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="J3K-eF-Sjb" secondAttribute="trailing" constant="148" id="xlc-kB-2TE"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="kuw-Nm-wT2"/>
-                                                    <exclude reference="rzq-X4-l3t"/>
-                                                    <exclude reference="xlc-kB-2TE"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
@@ -936,37 +859,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-<<<<<<< HEAD:Price Calculator/Price Calculator/Price Calculator/Base.lproj/Main.storyboard
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Import Tax (in %)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke6-W6-jVm">
-                                                    <rect key="frame" x="8" y="14" width="216" height="21"/>
-=======
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Import Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke6-W6-jVm">
                                                     <rect key="frame" x="16" y="11" width="216" height="21"/>
                                                     <animations/>
->>>>>>> origin/master:Price Calculator/Price Calculator/Price Calculator/Main.storyboard
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-<<<<<<< HEAD:Price Calculator/Price Calculator/Price Calculator/Base.lproj/Main.storyboard
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Gb-zb-2az">
-                                                    <rect key="frame" x="293" y="7" width="75" height="30"/>
-=======
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Gb-zb-2az">
                                                     <rect key="frame" x="293" y="7" width="150" height="30"/>
                                                     <animations/>
->>>>>>> origin/master:Price Calculator/Price Calculator/Price Calculator/Main.storyboard
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="07Q-mZ-r9O"/>
+                                                        <constraint firstAttribute="width" constant="150" id="07Q-mZ-r9O"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="QP5-WT-hCB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="QP5-WT-hCB"/>
-                                                        </mask>
-                                                    </variation>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
                                                         <action selector="tbShippingCostOnChange:" destination="w7d-Cf-i6z" eventType="editingDidEnd" id="Rx9-in-VJe"/>
                                                     </connections>
@@ -975,18 +883,8 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="6Gb-zb-2az" secondAttribute="trailing" constant="149" id="Pag-iL-tZx"/>
-                                                <constraint firstItem="6Gb-zb-2az" firstAttribute="top" secondItem="dPi-1t-3Y9" secondAttribute="topMargin" id="dEd-1l-Ug9"/>
-                                                <constraint firstItem="6Gb-zb-2az" firstAttribute="leading" secondItem="Ke6-W6-jVm" secondAttribute="trailing" constant="50" id="fIJ-s1-OtJ"/>
-                                                <constraint firstItem="Ke6-W6-jVm" firstAttribute="top" secondItem="dPi-1t-3Y9" secondAttribute="topMargin" constant="7" id="guB-De-Yyv"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="6Gb-zb-2az" secondAttribute="trailing" constant="20" id="qeu-Hs-F32"/>
-                                                <constraint firstItem="Ke6-W6-jVm" firstAttribute="leading" secondItem="dPi-1t-3Y9" secondAttribute="leadingMargin" constant="10" id="yUP-hU-KdP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6Gb-zb-2az" secondAttribute="trailing" constant="50" id="qeu-Hs-F32"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Pag-iL-tZx"/>
-                                                    <exclude reference="fIJ-s1-OtJ"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
@@ -1001,37 +899,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-<<<<<<< HEAD:Price Calculator/Price Calculator/Price Calculator/Base.lproj/Main.storyboard
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Profit Margin (in %)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxf-sG-3HA">
-                                                    <rect key="frame" x="8" y="14" width="197" height="21"/>
-=======
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profit Margin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxf-sG-3HA">
                                                     <rect key="frame" x="16" y="11" width="197" height="21"/>
                                                     <animations/>
->>>>>>> origin/master:Price Calculator/Price Calculator/Price Calculator/Main.storyboard
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-<<<<<<< HEAD:Price Calculator/Price Calculator/Price Calculator/Base.lproj/Main.storyboard
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kb2-ke-0R5">
-                                                    <rect key="frame" x="292" y="7" width="75" height="30"/>
-=======
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kb2-ke-0R5">
                                                     <rect key="frame" x="292" y="7" width="150" height="30"/>
                                                     <animations/>
->>>>>>> origin/master:Price Calculator/Price Calculator/Price Calculator/Main.storyboard
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="2yx-gR-Wwa"/>
-                                                        <constraint firstAttribute="width" constant="75" id="5lm-E8-eEa"/>
+                                                        <constraint firstAttribute="width" constant="150" id="5lm-E8-eEa"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="2yx-gR-Wwa"/>
-                                                        </mask>
-                                                    </variation>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
                                                         <action selector="tbShippingCostOnChange:" destination="w7d-Cf-i6z" eventType="editingDidEnd" id="bLm-rb-Zgb"/>
                                                     </connections>
@@ -1039,17 +922,9 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="Zxf-sG-3HA" firstAttribute="top" secondItem="N4f-JR-3U0" secondAttribute="topMargin" constant="7" id="0cT-2a-wjE"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="kb2-ke-0R5" secondAttribute="trailing" constant="20" id="CfJ-nm-X0N"/>
-                                                <constraint firstItem="Zxf-sG-3HA" firstAttribute="leading" secondItem="N4f-JR-3U0" secondAttribute="leadingMargin" constant="10" id="Fsh-fF-tUB"/>
-                                                <constraint firstItem="kb2-ke-0R5" firstAttribute="top" secondItem="N4f-JR-3U0" secondAttribute="topMargin" id="OCy-na-zMQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kb2-ke-0R5" secondAttribute="trailing" constant="50" id="CfJ-nm-X0N"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="kb2-ke-0R5" secondAttribute="trailing" constant="150" id="Rt1-iA-qiO"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Rt1-iA-qiO"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
@@ -1057,82 +932,25 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="About" id="o7w-Cf-Jg5">
                                 <cells>
-<<<<<<< HEAD:Price Calculator/Price Calculator/Price Calculator/Base.lproj/Main.storyboard
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="k7q-fI-CBx">
-                                        <rect key="frame" x="0.0" y="870" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k7q-fI-CBx" id="clU-si-srK">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-=======
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="txi-dd-RL7">
                                         <rect key="frame" x="0.0" y="865.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="txi-dd-RL7" id="D4O-HT-xva">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
->>>>>>> origin/master:Price Calculator/Price Calculator/Price Calculator/Main.storyboard
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Created By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSg-fq-Z8W">
-                                                    <rect key="frame" x="15" y="11" width="124" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstItem="qSg-fq-Z8W" firstAttribute="leading" secondItem="clU-si-srK" secondAttribute="leadingMargin" constant="10" id="uff-fw-zDH"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
-<<<<<<< HEAD:Price Calculator/Price Calculator/Price Calculator/Base.lproj/Main.storyboard
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="txi-dd-RL7">
-                                        <rect key="frame" x="0.0" y="914" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="txi-dd-RL7" id="D4O-HT-xva">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-=======
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="k7q-fI-CBx">
                                         <rect key="frame" x="0.0" y="909.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k7q-fI-CBx" id="clU-si-srK">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
->>>>>>> origin/master:Price Calculator/Price Calculator/Price Calculator/Main.storyboard
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Jules Kreutzer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpG-On-XKB">
-                                                    <rect key="frame" x="16" y="11" width="118" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstItem="PpG-On-XKB" firstAttribute="leading" secondItem="D4O-HT-xva" secondAttribute="leadingMargin" constant="10" id="3gX-aa-I0l"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="98j-M8-Fn7">
-                                        <rect key="frame" x="0.0" y="958" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="98j-M8-Fn7" id="wRT-dH-DCX">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Martijn Willems" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Foj-cL-ANX">
-                                                    <rect key="frame" x="16" y="11" width="121" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Foj-cL-ANX" firstAttribute="leading" secondItem="wRT-dH-DCX" secondAttribute="leadingMargin" constant="10" id="9Bs-62-JAr"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1153,9 +971,9 @@
                         <outlet property="StartCurrency" destination="SFE-iR-8jP" id="bO9-fN-AZ2"/>
                         <outlet property="lblEndCurrency" destination="cJB-rs-cmw" id="Tq0-aA-TPI"/>
                         <outlet property="lblStartCurrency" destination="Vns-lp-aK0" id="Dd7-Zh-NOJ"/>
-                        <outlet property="tbExchangeRateCorrection" destination="J3K-eF-Sjb" id="7Ay-6R-Ct9"/>
-                        <outlet property="tbImportTax" destination="6Gb-zb-2az" id="7hg-9M-J4O"/>
-                        <outlet property="tbProfitMargin" destination="kb2-ke-0R5" id="mPW-A9-b6f"/>
+                        <outlet property="tbExchangeRateCorrection" destination="J3K-eF-Sjb" id="nnN-cx-bd4"/>
+                        <outlet property="tbImportTax" destination="6Gb-zb-2az" id="ukK-IT-Rdb"/>
+                        <outlet property="tbProfitMargin" destination="kb2-ke-0R5" id="YBZ-k5-hZX"/>
                         <outlet property="tbShippingCost" destination="vzv-JH-rTI" id="EJi-g9-s2L"/>
                         <outletCollection property="StartCurrency" destination="SFE-iR-8jP" collectionClass="NSMutableArray" id="8Gt-zm-Cpe"/>
                         <outletCollection property="StartCurrency" destination="SFE-iR-8jP" collectionClass="NSMutableArray" id="S24-gd-ddB"/>
