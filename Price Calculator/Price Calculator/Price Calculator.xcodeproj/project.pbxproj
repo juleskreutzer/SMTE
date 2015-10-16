@@ -25,6 +25,7 @@
 		F5CC0B7D1BBE8B3D00ADD66F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B7C1BBE8B3D00ADD66F /* StartViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F5CC0B7F1BBE979300ADD66F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B7E1BBE979300ADD66F /* Colors.swift */; settings = {ASSET_TAGS = (); }; };
 		F5F00A3D1BCAD8D500CBDC5E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F00A3C1BCAD8D500CBDC5E /* ResultViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F5FEACEA1BD03E5D00FCFB41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5FEACE91BD03E5D00FCFB41 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		F5CC0B7C1BBE8B3D00ADD66F /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		F5CC0B7E1BBE979300ADD66F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F5F00A3C1BCAD8D500CBDC5E /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		F5FEACE91BD03E5D00FCFB41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				F5CC0B631BBE855600ADD66F /* Info.plist */,
 				F5CC0B5B1BBE855600ADD66F /* Price_Calculator.xcdatamodeld */,
 				F5C34E781BC65EA400BBD588 /* SettingsTableViewController.swift */,
+				F5FEACE91BD03E5D00FCFB41 /* Images.xcassets */,
 			);
 			path = "Price Calculator";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F522C5C21BCFD3ED00BD6C4A /* Main.storyboard in Resources */,
+				F5FEACEA1BD03E5D00FCFB41 /* Images.xcassets in Resources */,
 				F5CC0B621BBE855600ADD66F /* LaunchScreen.storyboard in Resources */,
 				F5CC0B5F1BBE855600ADD66F /* Assets.xcassets in Resources */,
 			);
@@ -371,7 +375,7 @@
 				INFOPLIST_FILE = "Price Calculator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nujules.Price-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nujules.PriceCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -385,7 +389,7 @@
 				INFOPLIST_FILE = "Price Calculator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nujules.Price-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nujules.PriceCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
