@@ -46,9 +46,9 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         
         lblStartCurrency.text = defaults.stringForKey("DefaultStartCurrency")
         lblEndCurrency.text = defaults.stringForKey("DefaultEndCurrency")
-        tbShippingCost.text = NSString(format: "%.2f", defaults.floatForKey("DefaultShippingCost")) as? String
-        tbExchangeRateCorrection.text =  NSString(format: "%.2f", defaults.floatForKey("DefaultExchangeRateCorrection")) as? String
-        tbImportTax.text = NSString(format: "%.2f", defaults.floatForKey("DefaultImportTax")) as? String
+        tbShippingCost.text = NSString(format: "%.2f", defaults.floatForKey("DefaultShippingCost")) as String
+        tbExchangeRateCorrection.text =  NSString(format: "%.2f", defaults.floatForKey("DefaultExchangeRateCorrection")) as String
+        tbImportTax.text = NSString(format: "%.2f", defaults.floatForKey("DefaultImportTax")) as String
         tbProfitMargin.text = NSString(format: "%.2f", defaults.floatForKey("DefaultProfitMargin")) as String
 
         
