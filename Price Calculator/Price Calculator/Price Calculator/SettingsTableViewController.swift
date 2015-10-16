@@ -131,8 +131,47 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
 
     }
     
+    @IBAction func tbExchangeRateCorrectionOnChange(sender: UITextField) {
+        if (Float(tbExchangeRateCorrection.text!) < 0)
+        {
+            tbExchangeRateCorrection.text = "0"
+        }
+        else if (Float(tbExchangeRateCorrection.text!) > 100)
+        {
+            tbExchangeRateCorrection.text = "100"
+        }
+        
+        print(tbExchangeRateCorrection.text)
+        defaults.setFloat(Float(tbExchangeRateCorrection.text!.stringByReplacingOccurrencesOfString(",", withString: "."))!, forKey: "DefaultExchangeRateCorrection")
+    }
 
+    @IBAction func tbImportTaxOnChange(sender: UITextField) {
+        if (Float(tbImportTax.text!) < 0)
+        {
+            tbImportTax.text = "0"
+        }
+        else if (Float(tbImportTax.text!) > 100)
+        {
+            tbImportTax.text = "100"
+        }
+        
+        print(tbImportTax.text)
+        defaults.setFloat(Float(tbImportTax.text!.stringByReplacingOccurrencesOfString(",", withString: "."))!, forKey: "DefaultImportTax")
+    }
     
+    @IBAction func tbProfitMargin(sender: UITextField) {
+        if (Float(tbProfitMargin.text!) < 0)
+        {
+            tbProfitMargin.text = "0"
+        }
+        else if (Float(tbImportTax.text!) > 100)
+        {
+            tbProfitMargin.text = "100"
+        }
+        
+        print(tbProfitMargin.text)
+        defaults.setFloat(Float(tbProfitMargin.text!.stringByReplacingOccurrencesOfString(",", withString: "."))!, forKey: "DefaultProfitMargin")
+    }
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
