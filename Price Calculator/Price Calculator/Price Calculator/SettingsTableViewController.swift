@@ -42,7 +42,7 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         CurrencyCell2.hidden = true
         CurrencyCell4.hidden = true
         
-        defaults.setFloat(4.5, forKey: "nettoPrice")
+        
         
         lblStartCurrency.text = defaults.stringForKey("DefaultStartCurrency")
         lblEndCurrency.text = defaults.stringForKey("DefaultEndCurrency")
@@ -51,7 +51,6 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         tbImportTax.text = NSString(format: "%.2f", defaults.floatForKey("DefaultImportTax")) as String
         tbProfitMargin.text = NSString(format: "%.2f", defaults.floatForKey("DefaultProfitMargin")) as String
 
-        //let rightPrice = Float(tbShippingCost.text!.stringByReplacingOccurrencesOfString(",", withString: "."))!
         
     }
 
@@ -118,14 +117,18 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     }
     
     @IBAction func tbShippingCostOnChange(sender: UITextField) {
-        if (Int(tbShippingCost.text!) < 0)
+        if (Float(tbShippingCost.text!) < 0)
         {
             tbShippingCost.text = "0"
         }
-        else if (Int(tbShippingCost.text!) > 100)
+        else if (Float(tbShippingCost.text!) > 100)
         {
             tbShippingCost.text = "100"
         }
+        
+        print(tbShippingCost.text)
+        defaults.setFloat(Float(tbShippingCost.text!.stringByReplacingOccurrencesOfString(",", withString: "."))!, forKey: "DefaultShippingCost")
+
     }
     
 
@@ -200,8 +203,14 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if (pickerView == StartCurrency){lblStartCurrency.text = pickerData[row]}
-        else if (pickerView == EndCurrency){lblEndCurrency.text = pickerData[row]}
+        if (pickerView == StartCurrency){
+            lblStartCurrency.text = pickerData[row]
+            defaults.setObject(pickerData[row], forKey: "DefaultStartCurrency")
+        }
+        else if (pickerView == EndCurrency){
+            lblEndCurrency.text = pickerData[row]
+            defaults.setObject(pickerData[row], forKey: "DefaultEndCurrency")
+        }
     }
 
 }
