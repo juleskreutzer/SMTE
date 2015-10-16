@@ -139,7 +139,8 @@ class DefaultVarViewController: UIViewController {
         let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alert.addAction(action)
         
-        presentViewController(alert, animated: true, completion: nil)    }
+        presentViewController(alert, animated: true, completion: nil)
+    }
 
     
 
