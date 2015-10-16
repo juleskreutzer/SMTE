@@ -11,13 +11,13 @@ import UIKit
 class CustomVarViewController: UIViewController {
 
     @IBOutlet weak var txtDiscountPercentage: UITextField!
-    @IBOutlet weak var lblDiscPercentage: UITextView!
     @IBOutlet weak var discountSlider: UISlider!
     @IBOutlet weak var lblDistPrice: UILabel!
     @IBOutlet weak var txtDistPrice: UITextField!
     @IBOutlet weak var txtNettoDistPrice: UITextField!
     @IBOutlet weak var lblNettoDistPrice: UILabel!
     @IBOutlet weak var switcher: UISwitch!
+    @IBOutlet weak var lblDiscPercentage: UILabel!
     
     var defaults = NSUserDefaults.standardUserDefaults()
     
@@ -42,10 +42,51 @@ class CustomVarViewController: UIViewController {
     {
         if(sender.direction == .Left)
         {
-            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SettingsTableViewController")
-            self.navigationController?.pushViewController(newViewController!, animated: true)
+            if(switcher.on == true)
+            {
+                defaults.setBool(true, forKey: "isNettoPrice")
+                // we have a netto price now
+                if (txtNettoDistPrice.text?.isEmpty == false)
+                {
+                    let wrongPrice : String = txtNettoDistPrice.text!
+                    let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
+                    let price : Float = Float(rightPrice)!
+                    
+                    defaults.setFloat(price, forKey: "nettoPrice")
+                    print(defaults.floatForKey("nettoPrice"))
+                    
+                    let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Step2ViewController")
+                    self.navigationController?.pushViewController(newViewController!, animated: true)
+                }
+                else{
+                    showError("Please fill in the netto distributor price.")
+                }
+            }
+            else
+            {
+                if(txtDistPrice.text?.isEmpty == false && txtDiscountPercentage.text?.isEmpty == false)
+                {
+                    let wrongPrice : String = txtDistPrice.text!
+                    let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
+                    let price : Float = Float(rightPrice)!
+                    
+                    defaults.setFloat(price, forKey: "brutoPrice")
+                    print(defaults.floatForKey("brutoPrice"))
+                    
+                    let percentage : Float = Float(txtDiscountPercentage.text!)!/100
+                    defaults.setFloat(percentage, forKey: "discountPercentage")
+                    print(defaults.floatForKey("discountPercentage"))
+
+                    
+                    let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Step2ViewController")
+                    self.navigationController?.pushViewController(newViewController!, animated: true)
+                }
+                else
+                {
+                    showError("Please fill in the distributor list price")
+                }
+            }
         }
-        
     }
     
     @IBAction func sliderValueChanged(sender: UISlider) {
@@ -85,54 +126,6 @@ class CustomVarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(switcher.on == true)
-        {
-            defaults.setBool(true, forKey: "isNettoPrice")
-            // we have a netto price now
-            if (txtNettoDistPrice.text != nil || txtNettoDistPrice.text != "")
-            {
-                let wrongPrice : String = txtNettoDistPrice.text!
-                let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
-                let price : Float = Float(rightPrice)!
-                
-                defaults.setFloat(price, forKey: "nettoPrice")
-                print(defaults.floatForKey("nettoPrice"))
-            }
-            else{
-                showError("Please fill in the netto distributor price.")
-            }
-        }
-        else
-        {
-            if(txtDistPrice.text != nil || txtDistPrice.text != "")
-            {
-                let wrongPrice : String = txtDistPrice.text!
-                let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
-                let price : Float = Float(rightPrice)!
-                
-                defaults.setFloat(price, forKey: "brutoPrice")
-                print(defaults.floatForKey("brutoPrice"))
-            }
-            else
-            {
-                showError("Please fill in the distributor list price")
-            }
-            
-            if(txtDiscountPercentage.text != nil || txtDiscountPercentage.text != "")
-            {
-                let percentage : Float = Float(txtDiscountPercentage.text!)!/100
-                defaults.setFloat(percentage, forKey: "discountPercentage")
-                print(defaults.floatForKey("discountPercentage"))
-            }
-            else
-            {
-                showError("Please fill in a discount percentage");
-            }
-        }
-    }
-    
-
     /*
     // MARK: - Navigation
 

@@ -25,7 +25,11 @@ class StartViewController: UIViewController {
         var defaults = NSUserDefaults.standardUserDefaults()
         
         // Retrieve the exchange data from fixer.io
-        exchangeRates.getExchangeRates()
+        var gotData = exchangeRates.getExchangeRates()
+        if(gotData == false)
+        {
+            showError()
+        }
         var data = defaults.objectForKey("USDrates")?.objectForKey("AUD")
         print(data);
         print(defaults.objectForKey("EURrates")?.objectForKey("USD"))
@@ -89,6 +93,18 @@ class StartViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
+    }
+    
+    func showError()
+    {
+        
+        let alert = UIAlertController(title: "Oops..", message: "We couldn't load the currency from the server.\nWe will use the data from last time.", preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(defaultAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
+        
     }
 
 
