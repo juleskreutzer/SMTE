@@ -46,6 +46,7 @@ class Step4ViewController: UIViewController {
             let margin : Float = Float(rightMargin)!
                 
             defaults.setFloat(margin, forKey: "margin")
+            defaults.setBool(true, forKey: "customCal")
             
             let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController")
             self.navigationController?.pushViewController(newViewController!, animated: true)

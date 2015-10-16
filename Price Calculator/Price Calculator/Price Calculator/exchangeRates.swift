@@ -25,19 +25,11 @@ class exchangeRates {
         let dictEUR : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(dataEUR, options: .MutableContainers) as! NSDictionary)
         let dictUSD : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(dataUSD, options: .MutableContainers) as! NSDictionary)
         
-        if(dictEUR != nil)
+        if(dictEUR != nil && dictUSD != nil)
         {
             defaults.setValue(dictEUR.objectForKey("rates"), forKey: "EURrates")
-            return true
-        }
-        else
-        {
-            return false
-        }
-        
-        if(dictUSD != nil)
-        {
             defaults.setValue(dictUSD.objectForKey("rates"), forKey: "USDrates")
+
             return true
         }
         else
@@ -45,5 +37,4 @@ class exchangeRates {
             return false
         }
     }
-    
 }
