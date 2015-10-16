@@ -96,6 +96,7 @@ class DefaultVarViewController: UIViewController {
                 
                 defaults.setFloat(price, forKey: "nettoPrice")
                 print(defaults.floatForKey("nettoPrice"))
+                defaults.setBool(false, forKey:"customCal")
             }
             else{
                 showError("Please fill in the netto distributor price.")
@@ -111,6 +112,7 @@ class DefaultVarViewController: UIViewController {
                 
                 defaults.setFloat(price, forKey: "brutoPrice")
                 print(defaults.floatForKey("brutoPrice"))
+                defaults.setBool(false, forKey: "customCal")
             }
             else
             {
@@ -122,6 +124,7 @@ class DefaultVarViewController: UIViewController {
                 let percentage : Float = Float(txtDiscountPercentage.text!)!/100
                 defaults.setFloat(percentage, forKey: "discountPercentage")
                 print(defaults.floatForKey("discountPercentage"))
+                defaults.setBool(false, forKey: "customCal")
             }
             else
             {
