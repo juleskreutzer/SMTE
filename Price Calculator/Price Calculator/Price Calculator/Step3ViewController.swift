@@ -54,14 +54,14 @@ class Step3ViewController: UIViewController {
             {
                 let wrongTax = txtTax.text!
                 let rightTax = wrongTax.stringByReplacingOccurrencesOfString(",", withString: ".")
-                let tax : Float = Float(rightTax)!
+                let tax : Double = Double(rightTax)!
                 
                 let wrongCorrection = txtCorrection.text!
                 let rightCorrection = wrongCorrection.stringByReplacingOccurrencesOfString(",", withString: ".")
-                let correction : Float = Float(rightCorrection)!
+                let correction : Double = Double(rightCorrection)!
                 
-                defaults.setFloat(tax, forKey: "tax")
-                defaults.setFloat(correction, forKey: "correction")
+                defaults.setDouble(tax, forKey: "tax")
+                defaults.setDouble(correction, forKey: "correction")
                 let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Step4ViewController")
                 self.navigationController?.pushViewController(newViewController!, animated: true)
                 

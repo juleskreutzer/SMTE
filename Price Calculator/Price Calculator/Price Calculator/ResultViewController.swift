@@ -11,6 +11,7 @@ import UIKit
 class ResultViewController: UIViewController,UINavigationBarDelegate {
 
     var defaults = NSUserDefaults.standardUserDefaults()
+    var formatter = NSFormatter()
     
     @IBOutlet weak var resultLabel: UILabel!
     
@@ -74,22 +75,18 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
             if(defaults.boolForKey("isNettoPrice") == true)
             {
                 // Calculate with netto price
-                let netto = defaults.floatForKey("nettoPrice")
-                let shippingCost = defaults.floatForKey("shippingCost")
-                let exchangeCorrection = defaults.floatForKey("correction")
-                let importTax = defaults.floatForKey("tax")
-                let desiredMargin = defaults.floatForKey("margin")
+                let netto = defaults.doubleForKey("nettoPrice")
+                let shippingCost = defaults.doubleForKey("shippingCost")
+                let exchangeCorrection = defaults.doubleForKey("correction")
+                let importTax = defaults.doubleForKey("tax")
+                let desiredMargin = defaults.doubleForKey("margin")
                 
-                let shipping = netto * shippingCost
-                let exchange = netto * exchangeCorrection
-                let tax = netto * importTax
+                let shipping = (netto*shippingCost)/100
+                let correction = ((netto + shipping)*exchangeCorrection)/100
+                print("ResultViewController line 86 not finished yet...")
                 
-                let resultBeforeMargin = netto + shipping + exchange + tax
-                let margin = resultBeforeMargin * desiredMargin
-                let result = resultBeforeMargin + margin
-                
-                resultLabel.text = String(result)
-                resultLabel.tintColor = Colors.green
+                //resultLabel.text = String(result)
+                //resultLabel.tintColor = Colors.green
                 
                 
                 

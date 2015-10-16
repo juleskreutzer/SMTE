@@ -43,9 +43,9 @@ class Step4ViewController: UIViewController {
         {
             let wrongMargin = txtMargin.text!
             let rightMargin = wrongMargin.stringByReplacingOccurrencesOfString(",", withString: ".")
-            let margin : Float = Float(rightMargin)!
+            let margin : Double = Double(rightMargin)!
                 
-            defaults.setFloat(margin, forKey: "margin")
+            defaults.setDouble(margin, forKey: "margin")
             defaults.setBool(true, forKey: "customCal")
             
             let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController")

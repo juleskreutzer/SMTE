@@ -68,9 +68,9 @@ class Step2ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDa
             {
                 let wrongPercentage : String = shippingPercentage.text!
                 let rightPercentage = wrongPercentage.stringByReplacingOccurrencesOfString(",", withString: ".")
-                let percentage : Float = Float(rightPercentage)!
+                let percentage : Double = Double(rightPercentage)!
                 
-                defaults.setFloat(percentage, forKey: "shippingCost")
+                defaults.setDouble(percentage, forKey: "shippingCost")
                 
                 let startWithInt = StartWithPicker.selectedRowInComponent(0)
                 let startWith = StartWithData[startWithInt]

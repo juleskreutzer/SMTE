@@ -50,9 +50,9 @@ class CustomVarViewController: UIViewController {
                 {
                     let wrongPrice : String = txtNettoDistPrice.text!
                     let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
-                    let price : Float = Float(rightPrice)!
+                    let price : Double = Double(rightPrice)!
                     
-                    defaults.setFloat(price, forKey: "nettoPrice")
+                    defaults.setDouble(price, forKey: "nettoPrice")
                     print(defaults.floatForKey("nettoPrice"))
                     
                     let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Step2ViewController")
@@ -68,13 +68,13 @@ class CustomVarViewController: UIViewController {
                 {
                     let wrongPrice : String = txtDistPrice.text!
                     let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
-                    let price : Float = Float(rightPrice)!
+                    let price : Double = Double(rightPrice)!
                     
-                    defaults.setFloat(price, forKey: "brutoPrice")
+                    defaults.setDouble(price, forKey: "brutoPrice")
                     print(defaults.floatForKey("brutoPrice"))
                     
-                    let percentage : Float = Float(txtDiscountPercentage.text!)!/100
-                    defaults.setFloat(percentage, forKey: "discountPercentage")
+                    let percentage : Double = Double(txtDiscountPercentage.text!)!/100
+                    defaults.setDouble(percentage, forKey: "discountPercentage")
                     print(defaults.floatForKey("discountPercentage"))
 
                     

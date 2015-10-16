@@ -92,9 +92,9 @@ class DefaultVarViewController: UIViewController {
             {
                 let wrongPrice : String = txtNettoDist.text!
                 let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
-                let price : Float = Float(rightPrice)!
+                let price : Double = Double(rightPrice)!
                 
-                defaults.setFloat(price, forKey: "nettoPrice")
+                defaults.setDouble(price, forKey: "nettoPrice")
                 print(defaults.floatForKey("nettoPrice"))
                 defaults.setBool(false, forKey:"customCal")
             }
@@ -108,10 +108,9 @@ class DefaultVarViewController: UIViewController {
             {
                 let wrongPrice : String = txtBrutoDist.text!
                 let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
-                let price : Float = Float(rightPrice)!
+                let price : Double = Double(rightPrice)!
                 
-                defaults.setFloat(price, forKey: "brutoPrice")
-                print(defaults.floatForKey("brutoPrice"))
+                defaults.setDouble(price, forKey: "brutoPrice")
                 defaults.setBool(false, forKey: "customCal")
             }
             else
@@ -121,9 +120,8 @@ class DefaultVarViewController: UIViewController {
             
             if(txtDiscountPercentage.text != nil || txtDiscountPercentage.text != "")
             {
-                let percentage : Float = Float(txtDiscountPercentage.text!)!/100
-                defaults.setFloat(percentage, forKey: "discountPercentage")
-                print(defaults.floatForKey("discountPercentage"))
+                let percentage : Double = Double(txtDiscountPercentage.text!)!/100
+                defaults.setDouble(percentage, forKey: "discountPercentage")
                 defaults.setBool(false, forKey: "customCal")
             }
             else
