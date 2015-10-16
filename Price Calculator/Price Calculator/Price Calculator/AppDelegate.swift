@@ -48,7 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(shortCutItem.type == "com.nujules.PriceCalculator.Recalculate")
         {
             print("Done")
-            success = true
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewControllerWithIdentifier("ResultViewController") as UIViewController
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            self.window?.rootViewController = initialViewControlleripad
+            self.window?.makeKeyAndVisible()
         }
         
         return success
