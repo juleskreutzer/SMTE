@@ -29,9 +29,10 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
         navigationItem.title = "Result"
         
         let leftItem = UIBarButtonItem(title: "Restart", style: .Plain, target: self, action: Selector("RestartAction"))
-        leftItem.tintColor = Colors.white
+        
         let rightItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: Selector("ShareAction"))
-        rightItem.tintColor = Colors.white
+        
+        resultLabel.tintColor = Colors.green
         
         navigationItem.leftBarButtonItem = leftItem
         navigationItem.rightBarButtonItem = rightItem
@@ -53,7 +54,7 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
     
     func RestartAction()
     {
-        let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RestartView")
+        let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("StartViewController")
         self.navigationController?.pushViewController(newViewController!, animated: true)
         
     }
@@ -70,6 +71,33 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
         {
             // Calculation with custom values
             print("Custom vars")
+            if(defaults.boolForKey("isNettoPrice") == true)
+            {
+                // Calculate with netto price
+                let netto = defaults.floatForKey("nettoPrice")
+                let shippingCost = defaults.floatForKey("shippingCost")
+                let exchangeCorrection = defaults.floatForKey("correction")
+                let importTax = defaults.floatForKey("tax")
+                let desiredMargin = defaults.floatForKey("margin")
+                
+                let shipping = netto * shippingCost
+                let exchange = netto * exchangeCorrection
+                let tax = netto * importTax
+                
+                let resultBeforeMargin = netto + shipping + exchange + tax
+                let margin = resultBeforeMargin * desiredMargin
+                let result = resultBeforeMargin + margin
+                
+                resultLabel.text = String(result)
+                resultLabel.tintColor = Colors.green
+                
+                
+                
+            }
+            else
+            {
+                // Calculate with bruto price
+            }
         }
         else
         {

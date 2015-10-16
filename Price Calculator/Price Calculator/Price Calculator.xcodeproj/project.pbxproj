@@ -15,6 +15,7 @@
 		F5322E611BC7A5C200DDA24B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5322E601BC7A5C200DDA24B /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F5322E631BC7DDF300DDA24B /* CustomVarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5322E621BC7DDF300DDA24B /* CustomVarViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F56078701BCCFED300D567C1 /* exchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F560786F1BCCFED300D567C1 /* exchangeRates.swift */; settings = {ASSET_TAGS = (); }; };
+		F5A39FEC1BD1199C00604D90 /* PriceCalculatorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A39FEB1BD1199C00604D90 /* PriceCalculatorIcon.png */; settings = {ASSET_TAGS = (); }; };
 		F5C34E791BC65EA400BBD588 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C34E781BC65EA400BBD588 /* SettingsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F5CC0B551BBE855600ADD66F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B541BBE855600ADD66F /* AppDelegate.swift */; };
 		F5CC0B571BBE855600ADD66F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B561BBE855600ADD66F /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		F5322E601BC7A5C200DDA24B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F5322E621BC7DDF300DDA24B /* CustomVarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVarViewController.swift; sourceTree = "<group>"; };
 		F560786F1BCCFED300D567C1 /* exchangeRates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exchangeRates.swift; sourceTree = "<group>"; };
+		F5A39FEB1BD1199C00604D90 /* PriceCalculatorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PriceCalculatorIcon.png; sourceTree = "<group>"; };
 		F5C34E781BC65EA400BBD588 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		F5CC0B511BBE855600ADD66F /* Price Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Price Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CC0B541BBE855600ADD66F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		F5CC0B531BBE855600ADD66F /* Price Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				F5A39FEB1BD1199C00604D90 /* PriceCalculatorIcon.png */,
 				F522C5C11BCFD3ED00BD6C4A /* Main.storyboard */,
 				F5CC0B541BBE855600ADD66F /* AppDelegate.swift */,
 				F5CC0B561BBE855600ADD66F /* ViewController.swift */,
@@ -218,6 +221,7 @@
 			files = (
 				F522C5C21BCFD3ED00BD6C4A /* Main.storyboard in Resources */,
 				F5FEACEA1BD03E5D00FCFB41 /* Images.xcassets in Resources */,
+				F5A39FEC1BD1199C00604D90 /* PriceCalculatorIcon.png in Resources */,
 				F5CC0B621BBE855600ADD66F /* LaunchScreen.storyboard in Resources */,
 				F5CC0B5F1BBE855600ADD66F /* Assets.xcassets in Resources */,
 			);

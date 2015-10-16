@@ -15,8 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PriceCalculatorIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="vY2-aB-FQe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vY2-aB-FQe" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ACg-tj-pey"/>
+                            <constraint firstAttribute="trailing" secondItem="vY2-aB-FQe" secondAttribute="trailing" id="EE4-nx-JAS"/>
+                            <constraint firstItem="vY2-aB-FQe" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Kfy-CX-J2p"/>
+                            <constraint firstItem="vY2-aB-FQe" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="KnE-mH-Y3L"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +36,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PriceCalculatorIcon.png" width="1024" height="1024"/>
+    </resources>
 </document>
