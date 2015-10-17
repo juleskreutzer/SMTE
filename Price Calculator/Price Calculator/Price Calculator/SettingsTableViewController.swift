@@ -19,7 +19,6 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     @IBOutlet weak var tbImportTax: UITextField!
     @IBOutlet weak var tbProfitMargin: UITextField!
     
-    let pickerData = ["Euro","US Dollar","Pound","Belgian Euro","Australian Dollar"] // PLACEHOLDER CODE
     
     @IBOutlet weak var MainTable: UITableView!
     @IBOutlet weak var CurrencyCell1: UITableViewCell!
@@ -28,9 +27,17 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     @IBOutlet weak var CurrencyCell4: UITableViewCell!
     
     var defaults = NSUserDefaults.standardUserDefaults()
+    var pickerData = ["USD"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var dict = NSUserDefaults.standardUserDefaults().objectForKey("USDrates")
+        var data : Array<String> = []
+        for(key, value) in dict as! NSDictionary
+        {
+            pickerData.append(key as! String);
+        }
 
         UITabBar.appearance().barTintColor = Colors.orange
         StartCurrency.dataSource = self
