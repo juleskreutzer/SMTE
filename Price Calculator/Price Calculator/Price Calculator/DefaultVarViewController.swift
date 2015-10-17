@@ -104,6 +104,8 @@ class DefaultVarViewController: UIViewController {
         }
         else
         {
+            defaults.setBool(false, forKey: "isNettoPrice")
+            
             if(txtBrutoDist.text != nil || txtBrutoDist.text != "")
             {
                 let wrongPrice : String = txtBrutoDist.text!

@@ -159,7 +159,85 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
         else
         {
             // Calculation with default values
-            print("Default vars")
+            
+            if(defaults.boolForKey("isNettoPrice") == true)
+            {
+                // Calculate from netto price
+                let netto = defaults.doubleForKey("nettoPrice")
+                let shippingCost = defaults.doubleForKey("DefaultShippingCost")
+                let exchangeCorrection = defaults.doubleForKey("DefaultExchangeRateCorrection")
+                let importTax = defaults.doubleForKey("DefaultImportTax")
+                let desiredMargin = defaults.doubleForKey("DefaultProfitMargin")
+                
+                let shipping = round(netto*(shippingCost/100)*100)/100
+                let correction = round((netto+shipping)*(exchangeCorrection/100)*100)/100
+                let tax = round((netto*(importTax/100))*100)/100
+                
+                let landedCostWrong = netto + shipping + correction + tax
+                
+                var toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("DefaultStartCurrency") as! String, currencyTo: defaults.objectForKey("DefaultEndCurrency") as! String)
+                if(toCurrency != 0)
+                {
+                    print("currency rate is not 0")
+                    var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
+                    var result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    resultLabel.text = "\(result)"
+                    resultLabel.tintColor = Colors.green
+                }
+                else
+                {
+                    print("currency rate is 0")
+                    var result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    resultLabel.text = "\(result)"
+                    resultLabel.tintColor = Colors.green
+                }
+                
+            }
+            else
+            {
+                // Calculate with bruto price
+                
+                var bruto = defaults.doubleForKey("brutoPrice")
+                var discount = defaults.doubleForKey("discountPercentage")
+                
+                var netto : Double = 0
+                if(discount == 0)
+                {
+                    netto = bruto
+                }
+                else
+                {
+                    netto = round(bruto*(discount/100)*100)/100
+                }
+
+                let shippingCost = defaults.doubleForKey("DefaultShippingCost")
+                let exchangeCorrection = defaults.doubleForKey("DefaultExchangeRateCorrection")
+                let importTax = defaults.doubleForKey("DefaultImportTax")
+                let desiredMargin = defaults.doubleForKey("DefaultProfitMargin")
+                
+                let shipping = round(netto*(shippingCost/100)*100)/100
+                let correction = round((netto+shipping)*(exchangeCorrection/100)*100)/100
+                let tax = round((netto*(importTax/100))*100)/100
+                
+                let landedCostWrong = netto + shipping + correction + tax
+                
+                var toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("DefaultStartCurrency") as! String, currencyTo: defaults.objectForKey("DefaultEndCurrency") as! String)
+                if(toCurrency != 0)
+                {
+                    print("currency rate is not 0")
+                    var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
+                    var result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    resultLabel.text = "\(result)"
+                    resultLabel.tintColor = Colors.green
+                }
+                else
+                {
+                    print("currency rate is 0")
+                    var result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    resultLabel.text = "\(result)"
+                    resultLabel.tintColor = Colors.green
+                }
+            }
         }
     }
     
