@@ -81,12 +81,31 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
                 let importTax = defaults.doubleForKey("tax")
                 let desiredMargin = defaults.doubleForKey("margin")
                 
-                let shipping = (netto*shippingCost)/100
-                let correction = ((netto + shipping)*exchangeCorrection)/100
-                print("ResultViewController line 86 not finished yet...")
+                let shipping = round(netto*(shippingCost/100)*100)/100
+                print("Shipping: \(shipping)")
+                let correction = round((netto+shipping)*(exchangeCorrection/100)*100)/100
+                print("Correction: \(correction)")
+                let tax = round((netto*(importTax/100))*100)/100
+                print("tax: \(tax)")
                 
-                //resultLabel.text = String(result)
-                //resultLabel.tintColor = Colors.green
+                let landedCostWrong = netto + shipping + correction + tax
+                
+                var toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("startWith") as! String, currencyTo: defaults.objectForKey("calculateTo") as! String)
+                if(toCurrency != 0)
+                {
+                    print("currency rate is not 0")
+                    var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
+                    var result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    resultLabel.text = "\(result)"
+                    resultLabel.tintColor = Colors.green
+                }
+                else
+                {
+                    print("currency rate is 0")
+                    var result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    resultLabel.text = "\(result)"
+                    resultLabel.tintColor = Colors.green
+                }
                 
                 
                 
