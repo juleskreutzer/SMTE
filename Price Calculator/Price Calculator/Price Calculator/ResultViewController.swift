@@ -17,6 +17,7 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultLabel.tintColor = Colors.green
         
         let navigationBar = UINavigationBar(frame: CGRectMake(0, 0, self.view.frame.size.width, 64))
         
@@ -33,7 +34,7 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
         
         let rightItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: Selector("ShareAction"))
         
-        resultLabel.tintColor = Colors.green
+        
         
         navigationItem.leftBarButtonItem = leftItem
         navigationItem.rightBarButtonItem = rightItem
@@ -82,11 +83,8 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
                 let desiredMargin = defaults.doubleForKey("margin")
                 
                 let shipping = round(netto*(shippingCost/100)*100)/100
-                print("Shipping: \(shipping)")
                 let correction = round((netto+shipping)*(exchangeCorrection/100)*100)/100
-                print("Correction: \(correction)")
                 let tax = round((netto*(importTax/100))*100)/100
-                print("tax: \(tax)")
                 
                 let landedCostWrong = netto + shipping + correction + tax
                 
@@ -112,7 +110,50 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
             }
             else
             {
-                // Calculate with bruto price
+                var bruto = defaults.doubleForKey("brutoPrice")
+                var discount = defaults.doubleForKey("discountPercentage")
+                
+                var netto : Double = 0
+                if(discount == 0)
+                {
+                    netto = bruto
+                }
+                else
+                {
+                    netto = round(bruto*(discount/100)*100)/100
+                }
+                
+                let shippingCost = defaults.doubleForKey("shippingCost")
+                let exchangeCorrection = defaults.doubleForKey("correction")
+                let importTax = defaults.doubleForKey("tax")
+                let desiredMargin = defaults.doubleForKey("margin")
+                
+                let shipping = round(netto*(shippingCost/100)*100)/100
+                print("Shipping: \(shipping)")
+                let correction = round((netto+shipping)*(exchangeCorrection/100)*100)/100
+                print("Correction: \(correction)")
+                let tax = round((netto*(importTax/100))*100)/100
+                print("tax: \(tax)")
+                
+                let landedCostWrong = netto + shipping + correction + tax
+                
+                var toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("startWith") as! String, currencyTo: defaults.objectForKey("calculateTo") as! String)
+                if(toCurrency != 0)
+                {
+                    print("currency rate is not 0")
+                    var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
+                    var result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    resultLabel.text = "\(result)"
+                    resultLabel.tintColor = Colors.green
+                }
+                else
+                {
+                    print("currency rate is 0")
+                    var result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    resultLabel.text = "\(result)"
+                    resultLabel.tintColor = Colors.green
+                }
+
             }
         }
         else

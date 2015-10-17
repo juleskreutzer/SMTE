@@ -346,7 +346,7 @@
             </objects>
             <point key="canvasLocation" x="2722" y="649"/>
         </scene>
-        <!--Result-->
+        <!--Result View Controller-->
         <scene sceneID="ulo-5A-Ljc">
             <objects>
                 <viewController storyboardIdentifier="ResultViewController" id="d9y-VD-din" customClass="ResultViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -362,6 +362,7 @@
                                 <rect key="frame" x="20" y="233" width="560" height="134"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.77254901960784317" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -374,7 +375,7 @@
                             <constraint firstItem="633-yl-Z3K" firstAttribute="trailing" secondItem="hdY-Il-Vf8" secondAttribute="trailingMargin" id="r4Z-dJ-G1V"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Result" id="DC8-uB-622">
+                    <navigationItem key="navigationItem" id="DC8-uB-622">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="b2l-a6-RMb"/>
                     </navigationItem>
                     <connections>
@@ -1043,7 +1044,7 @@
                                                     <rect key="frame" x="15" y="11" width="296" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1066,7 +1067,7 @@
                                                     <rect key="frame" x="15" y="11" width="133" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1089,7 +1090,7 @@
                                                     <rect key="frame" x="13" y="11" width="148" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
