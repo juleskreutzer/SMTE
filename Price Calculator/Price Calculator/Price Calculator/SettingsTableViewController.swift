@@ -39,13 +39,13 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
             pickerData.append(key as! String);
         }
 
+        navigationController?.navigationBar.barTintColor = Colors.green
         UITabBar.appearance().barTintColor = Colors.orange
         StartCurrency.dataSource = self
         StartCurrency.delegate = self
         EndCurrency.dataSource = self
         EndCurrency.delegate = self
 
-        UITabBar.appearance().barTintColor = Colors.green
         CurrencyCell2.hidden = true
         CurrencyCell4.hidden = true
         

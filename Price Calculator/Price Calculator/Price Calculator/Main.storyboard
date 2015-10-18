@@ -27,7 +27,14 @@
                                     <segue destination="6Ke-gq-Uee" kind="show" id="qr0-b5-3I7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8g-g5-CyC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szu-wI-Rgf">
+                                <rect key="frame" x="20" y="222" width="560" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8g-g5-CyC">
                                 <rect key="frame" x="0.0" y="184" width="600" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -36,21 +43,17 @@
                                     <segue destination="7s9-nk-wgY" kind="show" id="g7x-9F-EKS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szu-wI-Rgf">
-                                <rect key="frame" x="20" y="222" width="560" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="S8g-g5-CyC" firstAttribute="leading" secondItem="IHP-mr-xhF" secondAttribute="leading" id="8qX-Cg-OBn"/>
+                            <constraint firstItem="S8g-g5-CyC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="Cnr-rw-Rxf"/>
                             <constraint firstItem="szu-wI-Rgf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hpy-bY-yOh"/>
-                            <constraint firstItem="szu-wI-Rgf" firstAttribute="centerX" secondItem="S8g-g5-CyC" secondAttribute="centerX" id="YNi-2E-SHA"/>
-                            <constraint firstItem="szu-wI-Rgf" firstAttribute="top" secondItem="S8g-g5-CyC" secondAttribute="bottom" constant="8" symbolic="YES" id="eRP-sp-5Ci"/>
+                            <constraint firstItem="S8g-g5-CyC" firstAttribute="centerX" secondItem="szu-wI-Rgf" secondAttribute="centerX" id="Mmm-ze-liM"/>
+                            <constraint firstItem="szu-wI-Rgf" firstAttribute="top" secondItem="S8g-g5-CyC" secondAttribute="bottom" constant="8" symbolic="YES" id="cyD-mW-oil"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IHP-mr-xhF" secondAttribute="trailing" constant="-20" id="j9V-o4-v1M"/>
+                            <constraint firstItem="S8g-g5-CyC" firstAttribute="trailing" secondItem="IHP-mr-xhF" secondAttribute="trailing" id="kmH-3L-NRG"/>
                             <constraint firstItem="IHP-mr-xhF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="lQH-zT-et5"/>
                             <constraint firstItem="szu-wI-Rgf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="222" id="lW8-Om-wVX"/>
                             <constraint firstItem="IHP-mr-xhF" firstAttribute="top" secondItem="szu-wI-Rgf" secondAttribute="bottom" constant="42" id="nzY-TL-UbT"/>
@@ -1142,7 +1145,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAm-kN-l2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="lu8-rT-cwS"/>
             </objects>
-            <point key="canvasLocation" x="526" y="1138"/>
+            <point key="canvasLocation" x="380" y="1144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FYB-2V-6a6">
@@ -1157,6 +1160,7 @@
                     <connections>
                         <segue destination="qvk-WK-l0a" kind="relationship" relationship="viewControllers" id="c3w-Lh-fWw"/>
                         <segue destination="w7d-Cf-i6z" kind="relationship" relationship="viewControllers" id="A9N-C3-qhn"/>
+                        <segue destination="ihO-N8-UnD" kind="relationship" relationship="viewControllers" id="rmm-4u-aAq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbS-yS-JXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1182,6 +1186,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XbZ-pD-xFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1192" y="313"/>
+        </scene>
+        <!--Pro version-->
+        <scene sceneID="g94-lY-xwj">
+            <objects>
+                <viewController id="ihO-N8-UnD" customClass="ProViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BDe-IO-7MT"/>
+                        <viewControllerLayoutGuide type="bottom" id="mSI-zM-Rxm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Hf-NC-DJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Go for Easy Calculator Pro and use over 20 different currencies to make your calculation. Buy once for your whole life" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J1Q-fP-AMV">
+                                <rect key="frame" x="20" y="68" width="560" height="116"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAZ-xy-dcU">
+                                <rect key="frame" x="20" y="200" width="560" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Buy Easy Calculator Pro"/>
+                                <connections>
+                                    <action selector="GoPro:" destination="ihO-N8-UnD" eventType="touchUpInside" id="Rnv-HM-ePn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J1Q-fP-AMV" firstAttribute="top" secondItem="BDe-IO-7MT" secondAttribute="bottom" constant="48" id="4lS-IL-5l3"/>
+                            <constraint firstItem="J1Q-fP-AMV" firstAttribute="trailing" secondItem="8Hf-NC-DJ0" secondAttribute="trailingMargin" id="510-F6-IJw"/>
+                            <constraint firstItem="mSI-zM-Rxm" firstAttribute="top" secondItem="J1Q-fP-AMV" secondAttribute="bottom" constant="367" id="8HL-s4-eXf"/>
+                            <constraint firstItem="BAZ-xy-dcU" firstAttribute="leading" secondItem="8Hf-NC-DJ0" secondAttribute="leadingMargin" id="Gwh-7a-3O6"/>
+                            <constraint firstItem="BAZ-xy-dcU" firstAttribute="trailing" secondItem="8Hf-NC-DJ0" secondAttribute="trailingMargin" id="IeG-2d-oXu"/>
+                            <constraint firstItem="J1Q-fP-AMV" firstAttribute="leading" secondItem="8Hf-NC-DJ0" secondAttribute="leadingMargin" id="aSj-93-k0k"/>
+                            <constraint firstItem="BAZ-xy-dcU" firstAttribute="top" secondItem="J1Q-fP-AMV" secondAttribute="bottom" constant="16" id="l0E-tY-fwz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pro version" image="ProIcon" id="d41-rl-UgC"/>
+                    <connections>
+                        <outlet property="buyButton" destination="BAZ-xy-dcU" id="BPs-uW-Gr2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aS8-b8-fxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="1144"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="2DI-YF-4gj">
@@ -1285,6 +1337,7 @@
     </scenes>
     <resources>
         <image name="CalculateItem" width="25" height="25"/>
+        <image name="ProIcon" width="25" height="25"/>
         <image name="SettingsItem" width="25" height="25"/>
     </resources>
 </document>
