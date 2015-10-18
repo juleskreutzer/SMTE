@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mr-xhF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mr-xhF">
                                 <rect key="frame" x="0.0" y="285" width="600" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -36,15 +36,27 @@
                                     <segue destination="7s9-nk-wgY" kind="show" id="g7x-9F-EKS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szu-wI-Rgf">
+                                <rect key="frame" x="20" y="222" width="560" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="IHP-mr-xhF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0bd-1c-2op"/>
+                            <constraint firstItem="szu-wI-Rgf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hpy-bY-yOh"/>
                             <constraint firstItem="S8g-g5-CyC" firstAttribute="trailing" secondItem="IHP-mr-xhF" secondAttribute="trailing" id="SNG-Az-nmI"/>
                             <constraint firstItem="IHP-mr-xhF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Viv-FP-hBV"/>
+                            <constraint firstItem="szu-wI-Rgf" firstAttribute="centerX" secondItem="S8g-g5-CyC" secondAttribute="centerX" id="YNi-2E-SHA"/>
                             <constraint firstItem="IHP-mr-xhF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="coJ-K1-WmK"/>
                             <constraint firstItem="IHP-mr-xhF" firstAttribute="leading" secondItem="S8g-g5-CyC" secondAttribute="leading" id="dHV-qu-NKO"/>
+                            <constraint firstItem="szu-wI-Rgf" firstAttribute="top" secondItem="S8g-g5-CyC" secondAttribute="bottom" constant="8" symbolic="YES" id="eRP-sp-5Ci"/>
+                            <constraint firstItem="szu-wI-Rgf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="222" id="lW8-Om-wVX"/>
+                            <constraint firstItem="IHP-mr-xhF" firstAttribute="top" secondItem="szu-wI-Rgf" secondAttribute="bottom" constant="42" id="nfb-UH-A53"/>
                             <constraint firstItem="IHP-mr-xhF" firstAttribute="top" secondItem="S8g-g5-CyC" secondAttribute="bottom" constant="71" id="yxB-qv-FoV"/>
                         </constraints>
                         <connections>
@@ -68,6 +80,7 @@
                     <connections>
                         <outlet property="customVars" destination="IHP-mr-xhF" id="fjS-BI-g1g"/>
                         <outlet property="defaultVars" destination="S8g-g5-CyC" id="t8e-Ls-OFu"/>
+                        <outlet property="infoLabel" destination="szu-wI-Rgf" id="EuF-vw-qCC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -665,7 +678,7 @@
             </objects>
             <point key="canvasLocation" x="4768" y="649"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="BNT-bI-cMS">
             <objects>
                 <tableViewController storyboardIdentifier="SettingsTableViewController" id="w7d-Cf-i6z" customClass="SettingsTableViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -1110,7 +1123,7 @@
                             <outlet property="delegate" destination="w7d-Cf-i6z" id="9ej-0c-MY0"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="XZn-wM-GSL"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsItem" id="XZn-wM-GSL"/>
                     <connections>
                         <outlet property="CurrencyCell1" destination="ddn-vd-V2g" id="sbI-hF-rNt"/>
                         <outlet property="CurrencyCell2" destination="edO-TV-wj0" id="ZJd-C2-JZI"/>
@@ -1154,11 +1167,11 @@
             </objects>
             <point key="canvasLocation" x="380" y="313"/>
         </scene>
-        <!--Item-->
+        <!--Calculate-->
         <scene sceneID="lTb-Z6-uLO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qvk-WK-l0a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uea-tS-Wgo"/>
+                    <tabBarItem key="tabBarItem" title="Calculate" image="CalculateItem" id="uea-tS-Wgo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AGk-LL-pBw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1274,4 +1287,8 @@
             <point key="canvasLocation" x="2004" y="-350"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CalculateItem" width="25" height="25"/>
+        <image name="SettingsItem" width="25" height="25"/>
+    </resources>
 </document>

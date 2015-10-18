@@ -11,6 +11,7 @@ import UIKit
 class StartViewController: UIViewController {
     @IBOutlet weak var defaultVars: UIButton!
     @IBOutlet weak var customVars: UIButton!
+    @IBOutlet weak var infoLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -23,6 +24,11 @@ class StartViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = Colors.green
         tabBarController!.tabBar.barTintColor = Colors.orange
         var defaults = NSUserDefaults.standardUserDefaults()
+        
+        var startWith : String = defaults.objectForKey("DefaultStartCurrency") as! String
+        var calculateTo : String = defaults.objectForKey("DefaultEndCurrency") as! String
+        
+        infoLabel.text = "Calculate from \(startWith) to \(calculateTo)"
         
         // Retrieve the exchange data from fixer.io
         var gotData = exchangeRates.getExchangeRates()
