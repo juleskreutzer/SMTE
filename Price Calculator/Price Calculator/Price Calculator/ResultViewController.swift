@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultViewController: UIViewController,UINavigationBarDelegate {
+class ResultViewController: UIViewController, UINavigationBarDelegate {
 
     var defaults = NSUserDefaults.standardUserDefaults()
     var formatter = NSFormatter()
@@ -56,8 +56,9 @@ class ResultViewController: UIViewController,UINavigationBarDelegate {
     
     func RestartAction()
     {
-        let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("StartViewController")
-        self.navigationController?.pushViewController(newViewController!, animated: true)
+        var window: UIWindow?
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewControllerWithIdentifier("StartViewController") as UIViewController
         
     }
     

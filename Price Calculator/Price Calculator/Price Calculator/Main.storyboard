@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mr-xhF">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-mr-xhF">
                                 <rect key="frame" x="0.0" y="285" width="600" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -36,7 +36,7 @@
                                     <segue destination="7s9-nk-wgY" kind="show" id="g7x-9F-EKS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szu-wI-Rgf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szu-wI-Rgf">
                                 <rect key="frame" x="20" y="222" width="560" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -47,17 +47,13 @@
                         <animations/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="IHP-mr-xhF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0bd-1c-2op"/>
                             <constraint firstItem="szu-wI-Rgf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hpy-bY-yOh"/>
-                            <constraint firstItem="S8g-g5-CyC" firstAttribute="trailing" secondItem="IHP-mr-xhF" secondAttribute="trailing" id="SNG-Az-nmI"/>
-                            <constraint firstItem="IHP-mr-xhF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Viv-FP-hBV"/>
                             <constraint firstItem="szu-wI-Rgf" firstAttribute="centerX" secondItem="S8g-g5-CyC" secondAttribute="centerX" id="YNi-2E-SHA"/>
-                            <constraint firstItem="IHP-mr-xhF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="coJ-K1-WmK"/>
-                            <constraint firstItem="IHP-mr-xhF" firstAttribute="leading" secondItem="S8g-g5-CyC" secondAttribute="leading" id="dHV-qu-NKO"/>
                             <constraint firstItem="szu-wI-Rgf" firstAttribute="top" secondItem="S8g-g5-CyC" secondAttribute="bottom" constant="8" symbolic="YES" id="eRP-sp-5Ci"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IHP-mr-xhF" secondAttribute="trailing" constant="-20" id="j9V-o4-v1M"/>
+                            <constraint firstItem="IHP-mr-xhF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="lQH-zT-et5"/>
                             <constraint firstItem="szu-wI-Rgf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="222" id="lW8-Om-wVX"/>
-                            <constraint firstItem="IHP-mr-xhF" firstAttribute="top" secondItem="szu-wI-Rgf" secondAttribute="bottom" constant="42" id="nfb-UH-A53"/>
-                            <constraint firstItem="IHP-mr-xhF" firstAttribute="top" secondItem="S8g-g5-CyC" secondAttribute="bottom" constant="71" id="yxB-qv-FoV"/>
+                            <constraint firstItem="IHP-mr-xhF" firstAttribute="top" secondItem="szu-wI-Rgf" secondAttribute="bottom" constant="42" id="nzY-TL-UbT"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="04O-rs-5cA" appends="YES" id="SLh-Aw-HqB"/>
