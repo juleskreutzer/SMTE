@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5196A8A1BD3D73F001FEBD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5196A891BD3D73F001FEBD3 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 		F522C5BA1BCF9D1100BD6C4A /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522C5B91BCF9D1100BD6C4A /* Step2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F522C5BC1BCF9D1C00BD6C4A /* Step3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522C5BB1BCF9D1C00BD6C4A /* Step3ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F522C5BE1BCF9D2200BD6C4A /* Step4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522C5BD1BCF9D2200BD6C4A /* Step4ViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -20,13 +21,11 @@
 		F5CC0B551BBE855600ADD66F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B541BBE855600ADD66F /* AppDelegate.swift */; };
 		F5CC0B571BBE855600ADD66F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B561BBE855600ADD66F /* ViewController.swift */; };
 		F5CC0B5D1BBE855600ADD66F /* Price_Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B5B1BBE855600ADD66F /* Price_Calculator.xcdatamodeld */; };
-		F5CC0B5F1BBE855600ADD66F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CC0B5E1BBE855600ADD66F /* Assets.xcassets */; };
 		F5CC0B621BBE855600ADD66F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CC0B601BBE855600ADD66F /* LaunchScreen.storyboard */; };
 		F5CC0B6D1BBE855600ADD66F /* Price_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B6C1BBE855600ADD66F /* Price_CalculatorTests.swift */; };
 		F5CC0B7D1BBE8B3D00ADD66F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B7C1BBE8B3D00ADD66F /* StartViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F5CC0B7F1BBE979300ADD66F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B7E1BBE979300ADD66F /* Colors.swift */; settings = {ASSET_TAGS = (); }; };
 		F5F00A3D1BCAD8D500CBDC5E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F00A3C1BCAD8D500CBDC5E /* ResultViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F5FEACEA1BD03E5D00FCFB41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5FEACE91BD03E5D00FCFB41 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5196A891BD3D73F001FEBD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F522C5B91BCF9D1100BD6C4A /* Step2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
 		F522C5BB1BCF9D1C00BD6C4A /* Step3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step3ViewController.swift; sourceTree = "<group>"; };
 		F522C5BD1BCF9D2200BD6C4A /* Step4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step4ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +54,6 @@
 		F5CC0B541BBE855600ADD66F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5CC0B561BBE855600ADD66F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5CC0B5C1BBE855600ADD66F /* Price_Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Price_Calculator.xcdatamodel; sourceTree = "<group>"; };
-		F5CC0B5E1BBE855600ADD66F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5CC0B611BBE855600ADD66F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5CC0B631BBE855600ADD66F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5CC0B681BBE855600ADD66F /* Price CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Price CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +62,6 @@
 		F5CC0B7C1BBE8B3D00ADD66F /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		F5CC0B7E1BBE979300ADD66F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F5F00A3C1BCAD8D500CBDC5E /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		F5FEACE91BD03E5D00FCFB41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +117,11 @@
 				F522C5BB1BCF9D1C00BD6C4A /* Step3ViewController.swift */,
 				F522C5BD1BCF9D2200BD6C4A /* Step4ViewController.swift */,
 				F5CC0B7E1BBE979300ADD66F /* Colors.swift */,
-				F5CC0B5E1BBE855600ADD66F /* Assets.xcassets */,
 				F5CC0B601BBE855600ADD66F /* LaunchScreen.storyboard */,
 				F5CC0B631BBE855600ADD66F /* Info.plist */,
 				F5CC0B5B1BBE855600ADD66F /* Price_Calculator.xcdatamodeld */,
 				F5C34E781BC65EA400BBD588 /* SettingsTableViewController.swift */,
-				F5FEACE91BD03E5D00FCFB41 /* Images.xcassets */,
+				F5196A891BD3D73F001FEBD3 /* Images.xcassets */,
 			);
 			path = "Price Calculator";
 			sourceTree = "<group>";
@@ -220,10 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F522C5C21BCFD3ED00BD6C4A /* Main.storyboard in Resources */,
-				F5FEACEA1BD03E5D00FCFB41 /* Images.xcassets in Resources */,
+				F5196A8A1BD3D73F001FEBD3 /* Images.xcassets in Resources */,
 				F5A39FEC1BD1199C00604D90 /* PriceCalculatorIcon.png in Resources */,
 				F5CC0B621BBE855600ADD66F /* LaunchScreen.storyboard in Resources */,
-				F5CC0B5F1BBE855600ADD66F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Price Calculator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -389,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Price Calculator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
