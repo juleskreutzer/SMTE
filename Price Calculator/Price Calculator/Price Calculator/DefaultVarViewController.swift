@@ -58,12 +58,6 @@ class DefaultVarViewController: UIViewController {
         discountSlider.thumbTintColor = Colors.green
         discountSlider.tintColor = Colors.orange
         
-        
-        
-        txtDiscountPercentage.text = String(defaults.floatForKey("discountPercentage")*100)
-        txtBrutoDist.text = String(defaults.floatForKey("brutoPrice"))
-        txtNettoDist.text = String(defaults.floatForKey("nettoPrice"))
-
         // Do any additional setup after loading the view.
     }
 
