@@ -111,49 +111,49 @@ class exchangeRates {
                 formatter.locale = NSLocale(localeIdentifier: "ro_RO")
                 break
             case "SGD":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "zh_SG")
                 break
             case "EUR":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "nl_NL")
                 break
             case "NOK":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "en_NO")
                 break
             case "HUF":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "en_HU")
                 break
             case "NZD":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "en_NZ")
                 break
             case "MYR":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "ms_MY")
                 break
             case "IDR":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "id_ID")
                 break
             case "KRW":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "ko_KR")
                 break
             case "JPY":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "ja_JP")
                 break
             case "INR":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "en_IN")
                 break
             case "PHP":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "en_PH")
                 break
             case "CZK":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "cs_CZ")
                 break
             case "HKD":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "en_HK")
                 break
             case "ZAR":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "en_ZA")
                 break
             case "CAD":
-                formatter.locale = NSLocale(localeIdentifier: "")
+                formatter.locale = NSLocale(localeIdentifier: "en_CA")
                 break
             default:
                 NSLog("%d not recognized", currency)

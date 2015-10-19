@@ -95,14 +95,16 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                     print("currency rate is not 0")
                     var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
                     var result = round(landedCostRight*(desiredMargin/100)*100)/100
-                    resultLabel.text = "\(result)"
+                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult as! String
                     resultLabel.tintColor = Colors.green
                 }
                 else
                 {
                     print("currency rate is 0")
                     var result = round(landedCostWrong*(desiredMargin/100)*100)/100
-                    resultLabel.text = "\(result)"
+                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult as! String
                     resultLabel.tintColor = Colors.green
                 }
                 
@@ -144,14 +146,17 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                     print("currency rate is not 0")
                     var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
                     var result = round(landedCostRight*(desiredMargin/100)*100)/100
-                    resultLabel.text = "\(result)"
+                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult as! String
                     resultLabel.tintColor = Colors.green
                 }
                 else
                 {
                     print("currency rate is 0")
                     var result = round(landedCostWrong*(desiredMargin/100)*100)/100
-                    resultLabel.text = "\(result)"
+                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult as! String
+                    
                     resultLabel.tintColor = Colors.green
                 }
 
@@ -182,14 +187,16 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                     print("currency rate is not 0")
                     var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
                     var result = round(landedCostRight*(desiredMargin/100)*100)/100
-                    resultLabel.text = "\(result)"
+                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult as! String
                     resultLabel.tintColor = Colors.green
                 }
                 else
                 {
                     print("currency rate is 0")
                     var result = round(landedCostWrong*(desiredMargin/100)*100)/100
-                    resultLabel.text = "\(result)"
+                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult as! String
                     resultLabel.tintColor = Colors.green
                 }
                 
@@ -228,14 +235,16 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                     print("currency rate is not 0")
                     var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
                     var result = round(landedCostRight*(desiredMargin/100)*100)/100
-                    resultLabel.text = "\(result)"
+                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult as! String
                     resultLabel.tintColor = Colors.green
                 }
                 else
                 {
                     print("currency rate is 0")
                     var result = round(landedCostWrong*(desiredMargin/100)*100)/100
-                    resultLabel.text = "\(result)"
+                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult as! String
                     resultLabel.tintColor = Colors.green
                 }
             }
