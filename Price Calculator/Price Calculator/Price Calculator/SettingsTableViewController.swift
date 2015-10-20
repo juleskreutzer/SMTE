@@ -41,6 +41,7 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
 
         navigationController?.navigationBar.barTintColor = Colors.green
         UITabBar.appearance().barTintColor = Colors.orange
+        
         StartCurrency.dataSource = self
         StartCurrency.delegate = self
         EndCurrency.dataSource = self
@@ -48,8 +49,6 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
 
         CurrencyCell2.hidden = true
         CurrencyCell4.hidden = true
-        
-        
         
         lblStartCurrency.text = defaults.stringForKey("DefaultStartCurrency")
         lblEndCurrency.text = defaults.stringForKey("DefaultEndCurrency")
@@ -258,5 +257,4 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
             defaults.setObject(pickerData[row], forKey: "DefaultEndCurrency")
         }
     }
-
 }

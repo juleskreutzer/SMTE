@@ -56,9 +56,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
     
     func RestartAction()
     {
-        var window: UIWindow?
-        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewControllerWithIdentifier("StartViewController") as UIViewController
+        showError("Not implemented Yet.")
         
     }
     
@@ -89,22 +87,22 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 
                 let landedCostWrong = netto + shipping + correction + tax
                 
-                var toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("startWith") as! String, currencyTo: defaults.objectForKey("calculateTo") as! String)
+                let toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("startWith") as! String, currencyTo: defaults.objectForKey("calculateTo") as! String)
                 if(toCurrency != 0)
                 {
                     print("currency rate is not 0")
-                    var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    var result = round(landedCostRight*(desiredMargin/100)*100)/100
-                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
-                    resultLabel.text = formattedResult as! String
+                    let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
+                    let result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
                 }
                 else
                 {
                     print("currency rate is 0")
-                    var result = round(landedCostWrong*(desiredMargin/100)*100)/100
-                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
-                    resultLabel.text = formattedResult as! String
+                    let result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
                 }
                 
@@ -113,8 +111,8 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
             }
             else
             {
-                var bruto = defaults.doubleForKey("brutoPrice")
-                var discount = defaults.doubleForKey("discountPercentage")
+                let bruto = defaults.doubleForKey("brutoPrice")
+                let discount = defaults.doubleForKey("discountPercentage")
                 
                 var netto : Double = 0
                 if(discount == 0)
@@ -140,23 +138,22 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 
                 let landedCostWrong = netto + shipping + correction + tax
                 
-                var toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("startWith") as! String, currencyTo: defaults.objectForKey("calculateTo") as! String)
+                let toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("startWith") as! String, currencyTo: defaults.objectForKey("calculateTo") as! String)
                 if(toCurrency != 0)
                 {
                     print("currency rate is not 0")
-                    var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    var result = round(landedCostRight*(desiredMargin/100)*100)/100
-                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
-                    resultLabel.text = formattedResult as! String
+                    let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
+                    let result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
                 }
                 else
                 {
                     print("currency rate is 0")
-                    var result = round(landedCostWrong*(desiredMargin/100)*100)/100
-                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
-                    resultLabel.text = formattedResult as! String
-                    
+                    let result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
                 }
 
@@ -181,22 +178,22 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 
                 let landedCostWrong = netto + shipping + correction + tax
                 
-                var toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("DefaultStartCurrency") as! String, currencyTo: defaults.objectForKey("DefaultEndCurrency") as! String)
+                let toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("DefaultStartCurrency") as! String, currencyTo: defaults.objectForKey("DefaultEndCurrency") as! String)
                 if(toCurrency != 0)
                 {
                     print("currency rate is not 0")
-                    var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    var result = round(landedCostRight*(desiredMargin/100)*100)/100
-                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
-                    resultLabel.text = formattedResult as! String
+                    let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
+                    let result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
                 }
                 else
                 {
                     print("currency rate is 0")
-                    var result = round(landedCostWrong*(desiredMargin/100)*100)/100
-                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
-                    resultLabel.text = formattedResult as! String
+                    let result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
                 }
                 
@@ -205,8 +202,8 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
             {
                 // Calculate with bruto price
                 
-                var bruto = defaults.doubleForKey("brutoPrice")
-                var discount = defaults.doubleForKey("discountPercentage")
+                let bruto = defaults.doubleForKey("brutoPrice")
+                let discount = defaults.doubleForKey("discountPercentage")
                 
                 var netto : Double = 0
                 if(discount == 0)
@@ -229,22 +226,22 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 
                 let landedCostWrong = netto + shipping + correction + tax
                 
-                var toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("DefaultStartCurrency") as! String, currencyTo: defaults.objectForKey("DefaultEndCurrency") as! String)
+                let toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("DefaultStartCurrency") as! String, currencyTo: defaults.objectForKey("DefaultEndCurrency") as! String)
                 if(toCurrency != 0)
                 {
                     print("currency rate is not 0")
-                    var landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    var result = round(landedCostRight*(desiredMargin/100)*100)/100
-                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
-                    resultLabel.text = formattedResult as! String
+                    let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
+                    let result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
                 }
                 else
                 {
                     print("currency rate is 0")
-                    var result = round(landedCostWrong*(desiredMargin/100)*100)/100
-                    var formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
-                    resultLabel.text = formattedResult as! String
+                    let result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
                 }
             }

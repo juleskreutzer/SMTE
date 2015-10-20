@@ -10,10 +10,16 @@ import UIKit
 
 class ProViewController: UIViewController {
 
+    @IBOutlet weak var NavigationBar: UINavigationBar!
+    @IBOutlet weak var RestorePurchaseButton: UIBarButtonItem!
     @IBOutlet weak var buyButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NavigationBar.tintColor = Colors.green
+        NavigationBar.backgroundColor = Colors.green
+        RestorePurchaseButton.tintColor = Colors.white
 
         // Do any additional setup after loading the view.
     }
@@ -25,9 +31,18 @@ class ProViewController: UIViewController {
     
     
     @IBAction func GoPro(sender: AnyObject) {
-        
-        
+        showError("You own the pro version at this moment, in-app purchase not implemented yet.")
     }
+    
+    func showError(message: String)
+    {
+        let alert = UIAlertController(title: "Oops..", message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
+
     
 
     /*

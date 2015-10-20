@@ -40,7 +40,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Use Default Settings        &gt;"/>
                                 <connections>
-                                    <segue destination="7s9-nk-wgY" kind="show" id="g7x-9F-EKS"/>
+                                    <action selector="UseDefaultSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c9y-ip-2DU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,7 +90,7 @@
         <!--Default Var View Controller-->
         <scene sceneID="S9v-7Y-wP8">
             <objects>
-                <viewController id="7s9-nk-wgY" customClass="DefaultVarViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DefaultVarViewController" id="7s9-nk-wgY" customClass="DefaultVarViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D9U-5B-0Ys"/>
                         <viewControllerLayoutGuide type="bottom" id="Aet-Yr-bjv"/>
@@ -1213,6 +1213,15 @@
                                     <action selector="GoPro:" destination="ihO-N8-UnD" eventType="touchUpInside" id="Rnv-HM-ePn"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRE-S0-vjH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Title" id="x51-yG-kI1">
+                                        <barButtonItem key="rightBarButtonItem" title="Restore Purchases" id="Dge-6h-OEw"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1220,14 +1229,19 @@
                             <constraint firstItem="J1Q-fP-AMV" firstAttribute="top" secondItem="BDe-IO-7MT" secondAttribute="bottom" constant="48" id="4lS-IL-5l3"/>
                             <constraint firstItem="J1Q-fP-AMV" firstAttribute="trailing" secondItem="8Hf-NC-DJ0" secondAttribute="trailingMargin" id="510-F6-IJw"/>
                             <constraint firstItem="mSI-zM-Rxm" firstAttribute="top" secondItem="J1Q-fP-AMV" secondAttribute="bottom" constant="367" id="8HL-s4-eXf"/>
+                            <constraint firstItem="eRE-S0-vjH" firstAttribute="leading" secondItem="8Hf-NC-DJ0" secondAttribute="leading" id="DXE-fx-Ka8"/>
                             <constraint firstItem="BAZ-xy-dcU" firstAttribute="leading" secondItem="8Hf-NC-DJ0" secondAttribute="leadingMargin" id="Gwh-7a-3O6"/>
                             <constraint firstItem="BAZ-xy-dcU" firstAttribute="trailing" secondItem="8Hf-NC-DJ0" secondAttribute="trailingMargin" id="IeG-2d-oXu"/>
+                            <constraint firstItem="eRE-S0-vjH" firstAttribute="top" secondItem="8Hf-NC-DJ0" secondAttribute="top" id="Kax-6x-ezF"/>
+                            <constraint firstItem="eRE-S0-vjH" firstAttribute="centerX" secondItem="J1Q-fP-AMV" secondAttribute="centerX" id="PsO-du-FcH"/>
                             <constraint firstItem="J1Q-fP-AMV" firstAttribute="leading" secondItem="8Hf-NC-DJ0" secondAttribute="leadingMargin" id="aSj-93-k0k"/>
                             <constraint firstItem="BAZ-xy-dcU" firstAttribute="top" secondItem="J1Q-fP-AMV" secondAttribute="bottom" constant="16" id="l0E-tY-fwz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pro version" image="ProIcon" id="d41-rl-UgC"/>
                     <connections>
+                        <outlet property="NavigationBar" destination="eRE-S0-vjH" id="iiI-c8-uKb"/>
+                        <outlet property="RestorePurchaseButton" destination="Dge-6h-OEw" id="ix3-wA-TMq"/>
                         <outlet property="buyButton" destination="BAZ-xy-dcU" id="BPs-uW-Gr2"/>
                     </connections>
                 </viewController>

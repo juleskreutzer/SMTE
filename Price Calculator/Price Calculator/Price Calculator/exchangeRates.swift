@@ -15,6 +15,7 @@ class exchangeRates {
     
     static var defaults = NSUserDefaults.standardUserDefaults()
     
+    // Load all currencies to use in pickerview
     static func getExchangeRates() -> Bool {
         // Get the URL for the data
 
@@ -35,28 +36,35 @@ class exchangeRates {
         }
     }
     
+    // Get the correct currency value for the calculation
     static func getCurrencyValue(currencyBase : String, currencyTo : String) -> Double
     {
+        if(currencyBase == currencyTo)
+        {
+            return 1.0
+        }
         let endpoint = NSURL(string: "https://api.fixer.io/latest?base=\(currencyBase)&symbols=\(currencyTo)")
         let data : NSData = NSData(contentsOfURL: endpoint!)!
         let dict : NSDictionary! = (try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! NSDictionary)
         
         if(dict != nil)
         {
-            var rates = dict.objectForKey("rates")
-            var value : Double = Double((rates?.objectForKey(currencyTo))! as! NSNumber)
+            let rates = dict.objectForKey("rates")!
+            let value = Double((rates.objectForKey(currencyTo))! as! NSNumber)
             return value
         }
-        return 0
+        return 1.0
     }
     
+    // Format the result to match the currency locale
     static func formatResult(currency: String, result: Double) -> NSNumberFormatter
     {
-        var formatter = NSNumberFormatter()
-        var price = result
+        let formatter = NSNumberFormatter()
+        let price = result
+        formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
         
         
-        
+        // Switch over all currencies to set the correct locale
         switch(currency)
         {
             case "USD":
