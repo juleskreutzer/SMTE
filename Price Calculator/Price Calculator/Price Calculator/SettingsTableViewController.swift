@@ -27,7 +27,7 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
     @IBOutlet weak var CurrencyCell4: UITableViewCell!
     
     var defaults = NSUserDefaults.standardUserDefaults()
-    var pickerData = ["USD"]
+    var pickerData = ["Select a Currency", "USD"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -24,7 +24,7 @@ class Step2ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDa
     Get the shipping cost and let the user choose for the start and end valuta to calculate with
     */
     
-    var StartWithData = ["USD"]
+    var StartWithData = ["Select a currency", "USD"]
     
     var defaults = NSUserDefaults.standardUserDefaults()
 

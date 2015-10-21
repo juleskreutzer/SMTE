@@ -100,7 +100,7 @@ class DefaultVarViewController: UIViewController {
         {
             defaults.setBool(false, forKey: "isNettoPrice")
             
-            if(txtBrutoDist.text != nil || txtBrutoDist.text != "")
+            if(txtBrutoDist.text?.isEmpty != true)
             {
                 let wrongPrice : String = txtBrutoDist.text!
                 let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
@@ -114,9 +114,9 @@ class DefaultVarViewController: UIViewController {
                 showError("Please fill in the distributor list price")
             }
             
-            if(txtDiscountPercentage.text != nil || txtDiscountPercentage.text != "")
+            if(txtDiscountPercentage.text?.isEmpty != true)
             {
-                let percentage : Double = Double(txtDiscountPercentage.text!)!/100
+                let percentage : Double = Double(txtDiscountPercentage.text!)!
                 defaults.setDouble(percentage, forKey: "discountPercentage")
                 defaults.setBool(false, forKey: "customCal")
             }

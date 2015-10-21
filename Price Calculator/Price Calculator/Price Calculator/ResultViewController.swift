@@ -121,7 +121,8 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 }
                 else
                 {
-                    netto = round(bruto*(discount/100)*100)/100
+                    let amount = round(bruto*(discount/100)*100)/100
+                    netto = bruto - amount
                 }
                 
                 let shippingCost = defaults.doubleForKey("shippingCost")
@@ -205,6 +206,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 let bruto = defaults.doubleForKey("brutoPrice")
                 let discount = defaults.doubleForKey("discountPercentage")
                 
+                print("Bruto price is: \(bruto)")
                 var netto : Double = 0
                 if(discount == 0)
                 {
@@ -212,8 +214,12 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 }
                 else
                 {
-                    netto = round(bruto*(discount/100)*100)/100
+                    let amount = round(bruto*(discount/100)*100)/100
+                    netto = bruto - amount
                 }
+                
+                print("Discount is: \(discount)")
+                print("Netto is: \(netto)")
 
                 let shippingCost = defaults.doubleForKey("DefaultShippingCost")
                 let exchangeCorrection = defaults.doubleForKey("DefaultExchangeRateCorrection")
@@ -232,7 +238,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
                     let result = round(landedCostRight*(desiredMargin/100)*100)/100
-                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("DefaultEndCurrency") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
                 }
