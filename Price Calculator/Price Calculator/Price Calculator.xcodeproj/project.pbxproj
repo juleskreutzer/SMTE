@@ -18,6 +18,7 @@
 		F5322E631BC7DDF300DDA24B /* CustomVarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5322E621BC7DDF300DDA24B /* CustomVarViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F56078701BCCFED300D567C1 /* exchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F560786F1BCCFED300D567C1 /* exchangeRates.swift */; settings = {ASSET_TAGS = (); }; };
 		F5A39FEC1BD1199C00604D90 /* PriceCalculatorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A39FEB1BD1199C00604D90 /* PriceCalculatorIcon.png */; settings = {ASSET_TAGS = (); }; };
+		F5A9F8791BD78FD3009E08A7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A9F8781BD78FD3009E08A7 /* StoreKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F5C34E791BC65EA400BBD588 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C34E781BC65EA400BBD588 /* SettingsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F5CC0B551BBE855600ADD66F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B541BBE855600ADD66F /* AppDelegate.swift */; };
 		F5CC0B571BBE855600ADD66F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC0B561BBE855600ADD66F /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 		F5322E621BC7DDF300DDA24B /* CustomVarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVarViewController.swift; sourceTree = "<group>"; };
 		F560786F1BCCFED300D567C1 /* exchangeRates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exchangeRates.swift; sourceTree = "<group>"; };
 		F5A39FEB1BD1199C00604D90 /* PriceCalculatorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PriceCalculatorIcon.png; sourceTree = "<group>"; };
+		F5A9F8781BD78FD3009E08A7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F5C34E781BC65EA400BBD588 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		F5CC0B511BBE855600ADD66F /* Price Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Price Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CC0B541BBE855600ADD66F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A9F8791BD78FD3009E08A7 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,11 +90,13 @@
 		F5CC0B481BBE855600ADD66F = {
 			isa = PBXGroup;
 			children = (
+				F5A9F8781BD78FD3009E08A7 /* StoreKit.framework */,
 				F5CC0B531BBE855600ADD66F /* Price Calculator */,
 				F5CC0B6B1BBE855600ADD66F /* Price CalculatorTests */,
 				F5CC0B521BBE855600ADD66F /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		F5CC0B521BBE855600ADD66F /* Products */ = {
 			isa = PBXGroup;
