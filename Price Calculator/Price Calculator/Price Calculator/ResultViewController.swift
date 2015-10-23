@@ -56,7 +56,8 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
     
     func RestartAction()
     {
-        showError("Not implemented Yet.")
+        let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Step3ViewController")
+        self.navigationController?.pushViewController(newViewController!, animated: true)
         
     }
     
@@ -68,7 +69,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
     
     func Calculate()
     {
-        if(defaults.boolForKey("customCal") == true)
+        if(defaults.stringForKey("Calctype") == "CUSTOM")
         {
             // Calculation with custom values
             print("Custom vars")
@@ -92,7 +93,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    let result = landedCostRight*(desiredMargin/100)*100
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
@@ -100,7 +101,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 else
                 {
                     print("currency rate is 0")
-                    let result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    let result = landedCostWrong*(desiredMargin/100)*100
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
@@ -144,7 +145,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    let result = landedCostRight*(desiredMargin/100)*100
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
@@ -152,7 +153,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 else
                 {
                     print("currency rate is 0")
-                    let result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    let result = landedCostWrong*(desiredMargin/100)*100
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
@@ -160,7 +161,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
 
             }
         }
-        else
+        else if(defaults.stringForKey("CalcType") == "DEFAULT")
         {
             // Calculation with default values
             
@@ -184,7 +185,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    let result = landedCostRight*(desiredMargin/100)*100
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
@@ -192,7 +193,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 else
                 {
                     print("currency rate is 0")
-                    let result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    let result = landedCostWrong*(desiredMargin/100)*100
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
@@ -237,7 +238,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let result = round(landedCostRight*(desiredMargin/100)*100)/100
+                    let result = landedCostRight*(desiredMargin/100)*100
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("DefaultEndCurrency") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
@@ -245,12 +246,25 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 else
                 {
                     print("currency rate is 0")
-                    let result = round(landedCostWrong*(desiredMargin/100)*100)/100
+                    let result = landedCostWrong*(desiredMargin/100)*100
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
                 }
             }
+        }
+        else if(defaults.stringForKey("CalcType") == "CONVERT")
+        {
+            var amount = defaults.doubleForKey("amount")
+            
+            let toCurrency : Double = exchangeRates.getCurrencyValue(defaults.objectForKey("startWith") as! String, currencyTo: defaults.objectForKey("calculateTo") as! String)
+            
+            let result = amount*toCurrency
+            let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+            
+            resultLabel.text = formattedResult.stringFromNumber(result)
+            resultLabel.tintColor = Colors.green
+            
         }
     }
     

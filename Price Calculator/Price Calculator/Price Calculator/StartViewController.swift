@@ -11,34 +11,38 @@ import UIKit
 class StartViewController: UIViewController {
     @IBOutlet weak var defaultVars: UIButton!
     @IBOutlet weak var customVars: UIButton!
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var convertButton: UIButton!
     
     let defaults = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        defaultVars.tintColor = Colors.green
-        customVars.tintColor = Colors.green
-        //defaultVars.backgroundColor = Colors.blue
-        //customVars.backgroundColor = Colors.blue
+        defaultVars.tintColor = Colors.orange
+        customVars.tintColor = Colors.orange
+        convertButton.tintColor = Colors.orange
+//        defaultVars.backgroundColor = Colors.pink
+//        convertButton.backgroundColor = Colors.pink
+
+        defaultVars.layer.cornerRadius = 10
+        defaultVars.layer.borderColor = Colors.orange.CGColor
+        defaultVars.layer.borderWidth = 2
+        
+        customVars.layer.cornerRadius = 10
+        customVars.layer.borderColor = Colors.orange.CGColor
+        customVars.layer.borderWidth = 2
+        
+        convertButton.layer.cornerRadius = 10
+        convertButton.layer.borderColor = Colors.orange.CGColor
+        convertButton.layer.borderWidth = 2
+        
         self.view.backgroundColor = UIColor.whiteColor()
         navigationController?.navigationBar.barTintColor = Colors.green
-        tabBarController!.tabBar.barTintColor = Colors.orange
+        tabBarController!.tabBar.barTintColor = Colors.blue
+        tabBarController!.tabBar.tintColor = Colors.orange
+        //UITabBarItem.appearance().setTitleTextAttributes(Colors.orange, forState: .Selected)
+        //UITabBarItem.appearance().setTitleTextAttributes(Colors.white, forState: .Normal)
+
         
-        
-        
-        
-        if(defaults.objectForKey("DefaultStartCurrency") != nil && defaults.objectForKey("DefaultEndCurrency") != nil)
-        {
-            var startWith : String = defaults.objectForKey("DefaultStartCurrency") as! String
-            var calculateTo : String = defaults.objectForKey("DefaultEndCurrency") as! String
-        
-            infoLabel.text = "Calculate from \(startWith) to \(calculateTo)"
-        }
-        else
-        {
-            infoLabel.text = ""
-        }
         
         // Retrieve the exchange data from fixer.io
         var gotData = exchangeRates.getExchangeRates()

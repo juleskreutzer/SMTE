@@ -51,7 +51,7 @@ class ProViewController: UIViewController, SKProductsRequestDelegate, SKPaymentT
         // We check that we are allow to make the purchase.
         if (SKPaymentQueue.canMakePayments())
         {
-            var productID:NSSet = NSSet(object: self.product_id!);
+            let productID:NSSet = NSSet(object: self.product_id!);
             let productsRequest:SKProductsRequest = SKProductsRequest(productIdentifiers: productID as! Set<String>);
             productsRequest.delegate = self;
             productsRequest.start();
@@ -65,7 +65,7 @@ class ProViewController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     
     func buyProduct(product: SKProduct){
         print("Sending the Payment Request to Apple");
-        var payment = SKPayment(product: product)
+        let payment = SKPayment(product: product)
         SKPaymentQueue.defaultQueue().addPayment(payment);
         
     }
@@ -75,10 +75,10 @@ class ProViewController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     
     func productsRequest (request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
         print("got the request from Apple")
-        var count : Int = response.products.count
+        let count : Int = response.products.count
         if (count>0) {
-            var validProducts = response.products
-            var validProduct: SKProduct = response.products[0] as SKProduct
+            let validProducts = response.products
+            let validProduct: SKProduct = response.products[0] as SKProduct
             if (validProduct.productIdentifier == self.product_id) {
                 print(validProduct.localizedTitle)
                 print(validProduct.localizedDescription)
@@ -98,6 +98,9 @@ class ProViewController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     }
     
     func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        // It seems that IAP is turned off in simulator, that's why the IAP will always fail when debugging/testing
+        // http://stackoverflow.com/questions/26983439/skpaymenttransaction-always-fail
+        
         print("Received Payment Transaction Response from Apple");
         
         for transaction:AnyObject in transactions {
@@ -105,6 +108,8 @@ class ProViewController: UIViewController, SKProductsRequestDelegate, SKPaymentT
                 switch trans.transactionState {
                 case .Purchased:
                     print("Product Purchased");
+                    defaults.setBool(true, forKey: "ProVersion")
+                    exchangeRates.getExchangeRates()
                     SKPaymentQueue.defaultQueue().finishTransaction(transaction as! SKPaymentTransaction)
                     break;
                 case .Failed:
@@ -114,6 +119,7 @@ class ProViewController: UIViewController, SKProductsRequestDelegate, SKPaymentT
                     // case .Restored:
                     //[self restoreTransaction:transaction];
                 default:
+                    print("Transaction is not failed or purchased, something weird happend")
                     break;
                 }
             }
