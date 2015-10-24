@@ -110,10 +110,23 @@ class ProViewController: UIViewController, SKProductsRequestDelegate, SKPaymentT
                     print("Product Purchased");
                     defaults.setBool(true, forKey: "ProVersion")
                     exchangeRates.getExchangeRates()
+                    
+                    let alert = UIAlertController(title: "Thank You", message: "You now own Easy Price Calculator Pro. All currencies should be available by now. If not, please restart this app.", preferredStyle: .Alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    alert.addAction(defaultAction)
+                    
+                    presentViewController(alert, animated: true, completion: nil)
                     SKPaymentQueue.defaultQueue().finishTransaction(transaction as! SKPaymentTransaction)
                     break;
                 case .Failed:
                     print("Purchased Failed");
+                    let alert = UIAlertController(title: "Oops..", message: "Something went wrong. We weren't able to finish the transaction. Please try to buy Easy Price Calculator Pro again. If the problem still exists, please contact Apple.", preferredStyle: .Alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    alert.addAction(defaultAction)
+                    
+                    presentViewController(alert, animated: true, completion: nil)
                     SKPaymentQueue.defaultQueue().finishTransaction(transaction as! SKPaymentTransaction)
                     break;
                     // case .Restored:

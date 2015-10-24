@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -411,7 +412,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DC8-uB-622">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="b2l-a6-RMb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="b2l-a6-RMb">
+                            <connections>
+                                <segue destination="V2p-fP-duX" kind="show" id="39j-BP-yD6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="resultLabel" destination="633-yl-Z3K" id="Lql-hv-nQy"/>
@@ -420,6 +425,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9t9-ir-gLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5591" y="325"/>
+        </scene>
+        <!--Export View Controller-->
+        <scene sceneID="aLM-Dm-e4I">
+            <objects>
+                <viewController storyboardIdentifier="ExportViewController" id="V2p-fP-duX" customClass="ExportViewController" customModule="Price_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3de-dE-sa9"/>
+                        <viewControllerLayoutGuide type="bottom" id="qle-qQ-5wH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PCi-n1-L56">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GW-D2-sgS">
+                                <rect key="frame" x="83" y="124" width="100" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1GW-D2-sgS" secondAttribute="height" multiplier="1:1" id="LZw-A6-tZU"/>
+                                </constraints>
+                                <state key="normal" title="Mail"/>
+                                <connections>
+                                    <action selector="ExportResultToMail:" destination="V2p-fP-duX" eventType="touchUpInside" id="yxr-NK-OSo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lr0-QZ-hTA">
+                                <rect key="frame" x="83" y="268" width="100" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Lr0-QZ-hTA" secondAttribute="height" multiplier="1:1" id="wLT-Lt-c1z"/>
+                                </constraints>
+                                <state key="normal" title="Excel"/>
+                                <connections>
+                                    <action selector="ExportResultToExcel:" destination="V2p-fP-duX" eventType="touchUpInside" id="NEQ-Kr-2dN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wA-Oc-myH">
+                                <rect key="frame" x="391" y="124" width="100" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4wA-Oc-myH" secondAttribute="height" multiplier="1:1" id="zrC-Te-8rP"/>
+                                </constraints>
+                                <state key="normal" title="PDF"/>
+                                <connections>
+                                    <action selector="ExportResultToPdf:" destination="V2p-fP-duX" eventType="touchUpInside" id="MFg-vV-dLF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reK-9Y-OSi">
+                                <rect key="frame" x="391" y="268" width="100" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="reK-9Y-OSi" secondAttribute="height" multiplier="1:1" id="ya8-q7-LBM"/>
+                                </constraints>
+                                <state key="normal" title="Web"/>
+                                <connections>
+                                    <action selector="ExportResultToWeb:" destination="V2p-fP-duX" eventType="touchUpInside" id="rpt-kD-mNk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="reK-9Y-OSi" firstAttribute="leading" secondItem="4wA-Oc-myH" secondAttribute="leading" id="0L6-r7-b3E"/>
+                            <constraint firstItem="4wA-Oc-myH" firstAttribute="baseline" secondItem="1GW-D2-sgS" secondAttribute="baseline" id="1rx-Vf-gpc"/>
+                            <constraint firstItem="4wA-Oc-myH" firstAttribute="height" secondItem="1GW-D2-sgS" secondAttribute="height" id="7ku-0F-vx3"/>
+                            <constraint firstItem="1GW-D2-sgS" firstAttribute="leading" secondItem="PCi-n1-L56" secondAttribute="leadingMargin" constant="63" id="IJ2-vk-5zM"/>
+                            <constraint firstItem="qle-qQ-5wH" firstAttribute="top" secondItem="Lr0-QZ-hTA" secondAttribute="bottom" constant="232" id="MdS-bK-0ok"/>
+                            <constraint firstItem="Lr0-QZ-hTA" firstAttribute="top" secondItem="1GW-D2-sgS" secondAttribute="bottom" constant="44" id="RYk-1W-ZeO"/>
+                            <constraint firstItem="Lr0-QZ-hTA" firstAttribute="width" secondItem="1GW-D2-sgS" secondAttribute="width" id="eOy-LG-Jon"/>
+                            <constraint firstItem="Lr0-QZ-hTA" firstAttribute="baseline" secondItem="reK-9Y-OSi" secondAttribute="baseline" id="fpv-e7-H5W"/>
+                            <constraint firstItem="reK-9Y-OSi" firstAttribute="width" secondItem="1GW-D2-sgS" secondAttribute="width" id="gde-h4-9Nh"/>
+                            <constraint firstItem="4wA-Oc-myH" firstAttribute="width" secondItem="1GW-D2-sgS" secondAttribute="width" id="pca-2N-e65"/>
+                            <constraint firstItem="1GW-D2-sgS" firstAttribute="top" secondItem="3de-dE-sa9" secondAttribute="bottom" constant="104" id="rYI-F7-FbT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4wA-Oc-myH" secondAttribute="trailing" constant="89" id="rcj-P2-kam"/>
+                            <constraint firstItem="1GW-D2-sgS" firstAttribute="leading" secondItem="Lr0-QZ-hTA" secondAttribute="leading" id="rkT-5h-KdQ"/>
+                            <constraint firstItem="Lr0-QZ-hTA" firstAttribute="height" secondItem="1GW-D2-sgS" secondAttribute="height" id="yF0-HP-g4O"/>
+                            <constraint firstItem="reK-9Y-OSi" firstAttribute="height" secondItem="1GW-D2-sgS" secondAttribute="height" id="z0I-CI-i7d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exportExcel" destination="Lr0-QZ-hTA" id="A8z-Aj-mGM"/>
+                        <outlet property="exportMail" destination="1GW-D2-sgS" id="MYP-YT-cQV"/>
+                        <outlet property="exportPdf" destination="4wA-Oc-myH" id="kAq-Gm-q7v"/>
+                        <outlet property="exportWeb" destination="reK-9Y-OSi" id="DiH-8U-ylW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xz-4P-Lax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6434" y="325"/>
         </scene>
         <!--Step2 View Controller-->
         <scene sceneID="GR8-o8-hpN">
@@ -740,7 +833,7 @@
                                     <constraint firstAttribute="height" constant="21" id="ZYY-Ae-PrH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nA8-6I-BgL">
@@ -766,7 +859,7 @@
                                     <constraint firstAttribute="height" constant="21" id="I0f-qe-a7h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculate to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-c5-bjQ">
@@ -776,7 +869,7 @@
                                     <constraint firstAttribute="height" constant="21" id="9WU-z3-e9j"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXg-Cq-fTA">

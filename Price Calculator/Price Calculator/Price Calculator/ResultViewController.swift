@@ -63,7 +63,8 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
     
     func ShareAction()
     {
-        showError("Share function not implemented here yet.")
+        let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ExportViewController")
+        self.navigationController?.pushViewController(newViewController!, animated: true)
         
     }
     
