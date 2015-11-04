@@ -42,6 +42,7 @@ class CustomVarViewController: UIViewController {
     {
         if(sender.direction == .Left)
         {
+            defaults.setObject("CUSTOM", forKey: "Calctype")
             if(switcher.on == true)
             {
                 defaults.setBool(true, forKey: "isNettoPrice")

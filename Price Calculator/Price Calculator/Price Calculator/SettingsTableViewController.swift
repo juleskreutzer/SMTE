@@ -38,7 +38,7 @@ class SettingsTableViewController: UITableViewController,UIPickerViewDataSource,
         {
             pickerData.append(key as! String);
         }
-
+        
         navigationController?.navigationBar.barTintColor = Colors.green
         UITabBar.appearance().barTintColor = Colors.orange
         

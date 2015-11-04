@@ -11,7 +11,6 @@ import StoreKit
 
 class ProViewController: UIViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {
 
-    @IBOutlet weak var NavigationBar: UINavigationBar!
     @IBOutlet weak var RestorePurchaseButton: UIBarButtonItem!
     @IBOutlet weak var buyButton: UIButton!
     
@@ -23,9 +22,9 @@ class ProViewController: UIViewController, SKProductsRequestDelegate, SKPaymentT
         
         product_id = "EasyPriceCalculatorPro"
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
-        NavigationBar.tintColor = Colors.green
-        NavigationBar.backgroundColor = Colors.green
         RestorePurchaseButton.tintColor = Colors.white
+        navigationController?.navigationBar.barTintColor = Colors.green
+
         
         // Do any additional setup after loading the view.
     }

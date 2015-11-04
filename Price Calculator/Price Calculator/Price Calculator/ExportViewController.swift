@@ -59,7 +59,8 @@ class ExportViewController: UIViewController {
     }
     
     @IBAction func ExportResultToWeb(sender: AnyObject) {
-        showError("This function is not available in this version.")
+        let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ExportWebViewController")
+        self.navigationController?.pushViewController(newViewController!, animated: true)
     }
     
     func showError(message : String)

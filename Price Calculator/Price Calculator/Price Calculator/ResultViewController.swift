@@ -83,6 +83,8 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 let importTax = defaults.doubleForKey("tax")
                 let desiredMargin = defaults.doubleForKey("margin")
                 
+                
+                
                 let shipping = round(netto*(shippingCost/100)*100)/100
                 let correction = round((netto+shipping)*(exchangeCorrection/100)*100)/100
                 let tax = round((netto*(importTax/100))*100)/100
@@ -94,18 +96,38 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let result = landedCostRight*(desiredMargin/100)*100
+                    let margin = landedCostRight*(desiredMargin/100)*100
+                    let result = landedCostRight + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
+                    
+                    defaults.setObject(netto, forKey: "ExportNetto")
+                    defaults.setObject(shipping, forKey: "ExportShipping")
+                    defaults.setObject(correction, forKey: "ExportCorrection")
+                    defaults.setObject(tax, forKey: "ExportTax")
+                    defaults.setObject(margin, forKey: "ExportMargin")
+                    defaults.setObject(defaults.objectForKey("startWith"), forKey: "ExportStart")
+                    defaults.setObject(defaults.objectForKey("calculateTo"), forKey: "ExportEnd")
+                    defaults.setObject(result, forKey: "ExportResult")
                 }
                 else
                 {
                     print("currency rate is 0")
-                    let result = landedCostWrong*(desiredMargin/100)*100
+                    let margin = landedCostWrong*(desiredMargin/100)*100
+                    let result = landedCostWrong + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
+                    
+                    defaults.setObject(netto, forKey: "ExportNetto")
+                    defaults.setObject(shipping, forKey: "ExportShipping")
+                    defaults.setObject(correction, forKey: "ExportCorrection")
+                    defaults.setObject(tax, forKey: "ExportTax")
+                    defaults.setObject(margin, forKey: "ExportMargin")
+                    defaults.setObject(defaults.objectForKey("startWith"), forKey: "ExportStart")
+                    defaults.setObject(defaults.objectForKey("calculateTo"), forKey: "ExportEnd")
+                    defaults.setObject(result, forKey: "ExportResult")
                 }
                 
                 
@@ -146,18 +168,38 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let result = landedCostRight*(desiredMargin/100)*100
+                    let margin = landedCostRight*(desiredMargin/100)*100
+                    let result = landedCostRight + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
+                    
+                    defaults.setObject(netto, forKey: "ExportNetto")
+                    defaults.setObject(shipping, forKey: "ExportShipping")
+                    defaults.setObject(correction, forKey: "ExportCorrection")
+                    defaults.setObject(tax, forKey: "ExportTax")
+                    defaults.setObject(margin, forKey: "ExportMargin")
+                    defaults.setObject(defaults.objectForKey("startWith"), forKey: "ExportStart")
+                    defaults.setObject(defaults.objectForKey("calculateTo"), forKey: "ExportEnd")
+                    defaults.setObject(result, forKey: "ExportResult")
                 }
                 else
                 {
                     print("currency rate is 0")
-                    let result = landedCostWrong*(desiredMargin/100)*100
+                    let margin = landedCostWrong*(desiredMargin/100)*100
+                    let result = landedCostWrong + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
+                    
+                    defaults.setObject(netto, forKey: "ExportNetto")
+                    defaults.setObject(shipping, forKey: "ExportShipping")
+                    defaults.setObject(correction, forKey: "ExportCorrection")
+                    defaults.setObject(tax, forKey: "ExportTax")
+                    defaults.setObject(margin, forKey: "ExportMargin")
+                    defaults.setObject(defaults.objectForKey("startWith"), forKey: "ExportStart")
+                    defaults.setObject(defaults.objectForKey("calculateTo"), forKey: "ExportEnd")
+                    defaults.setObject(result, forKey: "ExportResult")
                 }
 
             }
@@ -186,18 +228,38 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let result = landedCostRight*(desiredMargin/100)*100
-                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    let margin = landedCostRight*(desiredMargin/100)*100
+                    let result = landedCostRight + margin
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("DefaultEndCurrency") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
+                    
+                    defaults.setObject(netto, forKey: "ExportNetto")
+                    defaults.setObject(shipping, forKey: "ExportShipping")
+                    defaults.setObject(correction, forKey: "ExportCorrection")
+                    defaults.setObject(tax, forKey: "ExportTax")
+                    defaults.setObject(margin, forKey: "ExportMargin")
+                    defaults.setObject(defaults.objectForKey("DefaultStartCurrency"), forKey: "ExportStart")
+                    defaults.setObject(defaults.objectForKey("DefaultEndCurrency"), forKey: "ExportEnd")
+                    defaults.setObject(result, forKey: "ExportResult")
                 }
                 else
                 {
                     print("currency rate is 0")
-                    let result = landedCostWrong*(desiredMargin/100)*100
-                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    let margin = landedCostWrong*(desiredMargin/100)*100
+                    let result = landedCostWrong + margin
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("DefaultEndCurrency") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
+                    
+                    defaults.setObject(netto, forKey: "ExportNetto")
+                    defaults.setObject(shipping, forKey: "ExportShipping")
+                    defaults.setObject(correction, forKey: "ExportCorrection")
+                    defaults.setObject(tax, forKey: "ExportTax")
+                    defaults.setObject(margin, forKey: "ExportMargin")
+                    defaults.setObject(defaults.objectForKey("DefaultStartCurrency"), forKey: "ExportStart")
+                    defaults.setObject(defaults.objectForKey("DefaultEndCurrency"), forKey: "ExportEnd")
+                    defaults.setObject(result, forKey: "ExportResult")
                 }
                 
             }
@@ -239,18 +301,38 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let result = landedCostRight*(desiredMargin/100)*100
+                    let margin = landedCostRight*(desiredMargin/100)*100
+                    let result = landedCostRight + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("DefaultEndCurrency") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
+                    
+                    defaults.setObject(netto, forKey: "ExportNetto")
+                    defaults.setObject(shipping, forKey: "ExportShipping")
+                    defaults.setObject(correction, forKey: "ExportCorrection")
+                    defaults.setObject(tax, forKey: "ExportTax")
+                    defaults.setObject(margin, forKey: "ExportMargin")
+                    defaults.setObject(defaults.objectForKey("DefaultStartCurrency"), forKey: "ExportStart")
+                    defaults.setObject(defaults.objectForKey("DefaultEndCurrency"), forKey: "ExportEnd")
+                    defaults.setObject(result, forKey: "ExportResult")
                 }
                 else
                 {
                     print("currency rate is 0")
-                    let result = landedCostWrong*(desiredMargin/100)*100
-                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
+                    let margin = landedCostWrong*(desiredMargin/100)*100
+                    let result = landedCostWrong + margin
+                    let formattedResult = exchangeRates.formatResult(defaults.objectForKey("DefaultEndCurrency") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
                     resultLabel.tintColor = Colors.green
+                    
+                    defaults.setObject(netto, forKey: "ExportNetto")
+                    defaults.setObject(shipping, forKey: "ExportShipping")
+                    defaults.setObject(correction, forKey: "ExportCorrection")
+                    defaults.setObject(tax, forKey: "ExportTax")
+                    defaults.setObject(margin, forKey: "ExportMargin")
+                    defaults.setObject(defaults.objectForKey("DefaultStartCurrency"), forKey: "ExportStart")
+                    defaults.setObject(defaults.objectForKey("DefaultEndCurrency"), forKey: "ExportEnd")
+                    defaults.setObject(result, forKey: "ExportResult")
                 }
             }
         }
@@ -284,14 +366,11 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+/*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+*/
 
 }

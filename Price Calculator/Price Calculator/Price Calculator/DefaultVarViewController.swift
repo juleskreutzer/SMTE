@@ -82,7 +82,7 @@ class DefaultVarViewController: UIViewController {
         {
             defaults.setBool(true, forKey: "isNettoPrice")
             // we have a netto price now
-            if (txtNettoDist.text != nil || txtNettoDist.text != "")
+            if (txtNettoDist.text?.isEmpty != true)
             {
                 let wrongPrice : String = txtNettoDist.text!
                 let rightPrice = wrongPrice.stringByReplacingOccurrencesOfString(",", withString: ".")
@@ -135,17 +135,4 @@ class DefaultVarViewController: UIViewController {
         
         presentViewController(alert, animated: true, completion: nil)
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

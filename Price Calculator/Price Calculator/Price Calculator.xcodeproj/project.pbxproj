@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5160B1C1BDD4A44000449B5 /* htmlExport.html in Resources */ = {isa = PBXBuildFile; fileRef = F5160B1B1BDD4A44000449B5 /* htmlExport.html */; };
+		F5160B1E1BDD4A94000449B5 /* ExportWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5160B1D1BDD4A94000449B5 /* ExportWebViewController.swift */; };
 		F5196A8A1BD3D73F001FEBD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5196A891BD3D73F001FEBD3 /* Images.xcassets */; };
 		F5196A8C1BD41C98001FEBD3 /* ProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5196A8B1BD41C98001FEBD3 /* ProViewController.swift */; };
 		F522C5BA1BCF9D1100BD6C4A /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522C5B91BCF9D1100BD6C4A /* Step2ViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5160B1B1BDD4A44000449B5 /* htmlExport.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = htmlExport.html; sourceTree = "<group>"; };
+		F5160B1D1BDD4A94000449B5 /* ExportWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportWebViewController.swift; sourceTree = "<group>"; };
 		F5196A891BD3D73F001FEBD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F5196A8B1BD41C98001FEBD3 /* ProViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProViewController.swift; sourceTree = "<group>"; };
 		F522C5B91BCF9D1100BD6C4A /* Step2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
@@ -114,8 +118,10 @@
 		F5CC0B531BBE855600ADD66F /* Price Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				F5160B1B1BDD4A44000449B5 /* htmlExport.html */,
 				F5A39FEB1BD1199C00604D90 /* PriceCalculatorIcon.png */,
 				F522C5C11BCFD3ED00BD6C4A /* Main.storyboard */,
+				F5160B1D1BDD4A94000449B5 /* ExportWebViewController.swift */,
 				F5196A8B1BD41C98001FEBD3 /* ProViewController.swift */,
 				F5CC0B541BBE855600ADD66F /* AppDelegate.swift */,
 				F5CC0B561BBE855600ADD66F /* ViewController.swift */,
@@ -232,6 +238,7 @@
 			files = (
 				F522C5C21BCFD3ED00BD6C4A /* Main.storyboard in Resources */,
 				F5196A8A1BD3D73F001FEBD3 /* Images.xcassets in Resources */,
+				F5160B1C1BDD4A44000449B5 /* htmlExport.html in Resources */,
 				F5A39FEC1BD1199C00604D90 /* PriceCalculatorIcon.png in Resources */,
 				F5CC0B621BBE855600ADD66F /* LaunchScreen.storyboard in Resources */,
 			);
@@ -260,6 +267,7 @@
 				F5B596BA1BDC036E005D2BAF /* ExportViewController.swift in Sources */,
 				F5FF73B51BDA8B07009450CD /* ConvertViewController.swift in Sources */,
 				F5CC0B7F1BBE979300ADD66F /* Colors.swift in Sources */,
+				F5160B1E1BDD4A94000449B5 /* ExportWebViewController.swift in Sources */,
 				F5322E611BC7A5C200DDA24B /* LoginViewController.swift in Sources */,
 				F5F00A3D1BCAD8D500CBDC5E /* ResultViewController.swift in Sources */,
 				F5CC0B5D1BBE855600ADD66F /* Price_Calculator.xcdatamodeld in Sources */,
