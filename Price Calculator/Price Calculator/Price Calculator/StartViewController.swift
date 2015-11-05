@@ -87,6 +87,15 @@ class StartViewController: UIViewController {
     */
  
     @IBAction func UseDefaultSettings(sender: AnyObject) {
+        
+        var start : String = defaults.stringForKey("DefaultStartCurrency")!
+        var end : String = defaults.stringForKey("DefaultEndCurrency")!
+        
+        if(start == "Select a Currency" || end == "Select a Currency")
+        {
+            showError("Please select a start and/or end currency in the settings.")
+        }
+        
         if(defaults.objectForKey("DefaultStartCurrency") == nil)
         {
             showError("Please set the currency you want to start with in the Settings to use this option")
@@ -116,6 +125,8 @@ class StartViewController: UIViewController {
             let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DefaultVarViewController")
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
+        
+        
         
     }
     @IBAction func showInfo(sender: AnyObject) {

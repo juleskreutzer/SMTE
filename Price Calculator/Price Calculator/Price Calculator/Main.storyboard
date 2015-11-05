@@ -571,7 +571,7 @@
                                     <constraint firstAttribute="width" constant="85" id="QUp-Nw-EBQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDn-ni-pW0">
                                 <rect key="frame" x="0.0" y="402" width="600" height="135"/>

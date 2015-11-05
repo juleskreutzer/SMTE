@@ -96,7 +96,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let margin = landedCostRight*(desiredMargin/100)*100
+                    let margin = landedCostRight*(desiredMargin/100)
                     let result = landedCostRight + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
@@ -114,7 +114,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 else
                 {
                     print("currency rate is 0")
-                    let margin = landedCostWrong*(desiredMargin/100)*100
+                    let margin = landedCostWrong*(desiredMargin/100)
                     let result = landedCostWrong + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
@@ -145,7 +145,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 }
                 else
                 {
-                    let amount = round(bruto*(discount/100)*100)/100
+                    let amount = round(bruto*(discount*100))/100
                     netto = bruto - amount
                 }
                 
@@ -168,7 +168,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let margin = landedCostRight*(desiredMargin/100)*100
+                    let margin = landedCostWrong*(desiredMargin/100)
                     let result = landedCostRight + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
@@ -186,7 +186,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 else
                 {
                     print("currency rate is 0")
-                    let margin = landedCostWrong*(desiredMargin/100)*100
+                    let margin = landedCostWrong*(desiredMargin/100)
                     let result = landedCostWrong + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("calculateTo") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
@@ -204,7 +204,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
 
             }
         }
-        else if(defaults.stringForKey("CalcType") == "DEFAULT")
+        else if(defaults.stringForKey("Calctype") == "DEFAULT")
         {
             // Calculation with default values
             
@@ -228,7 +228,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let margin = landedCostRight*(desiredMargin/100)*100
+                    let margin = landedCostWrong*(desiredMargin/100)
                     let result = landedCostRight + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("DefaultEndCurrency") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
@@ -246,7 +246,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 else
                 {
                     print("currency rate is 0")
-                    let margin = landedCostWrong*(desiredMargin/100)*100
+                    let margin = landedCostWrong*(desiredMargin/100)
                     let result = landedCostWrong + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("DefaultEndCurrency") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
@@ -301,7 +301,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 {
                     print("currency rate is not 0")
                     let landedCostRight = round((landedCostWrong*toCurrency)*100)/100
-                    let margin = landedCostRight*(desiredMargin/100)*100
+                    let margin = landedCostRight*(desiredMargin/100)
                     let result = landedCostRight + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("DefaultEndCurrency") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
@@ -319,7 +319,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 else
                 {
                     print("currency rate is 0")
-                    let margin = landedCostWrong*(desiredMargin/100)*100
+                    let margin = landedCostWrong*(desiredMargin/100)
                     let result = landedCostWrong + margin
                     let formattedResult = exchangeRates.formatResult(defaults.objectForKey("DefaultEndCurrency") as! String, result: result)
                     resultLabel.text = formattedResult.stringFromNumber(result)
@@ -336,7 +336,7 @@ class ResultViewController: UIViewController, UINavigationBarDelegate {
                 }
             }
         }
-        else if(defaults.stringForKey("CalcType") == "CONVERT")
+        else if(defaults.stringForKey("Calctype") == "CONVERT")
         {
             var amount = defaults.doubleForKey("amount")
             

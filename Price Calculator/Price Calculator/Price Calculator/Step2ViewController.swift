@@ -60,6 +60,17 @@ class Step2ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDa
     {
         if(sender.direction == .Left)
         {
+            var startInt = StartWithPicker.selectedRowInComponent(0)
+            var endInt = CalculateToPicker.selectedRowInComponent(0)
+            
+            var start = StartWithData[startInt]
+            var end = StartWithData[endInt]
+            
+            if(start == "Select a currency" || end == "Select a currency")
+            {
+                showError("Please select a start and/or end currency in the settings.")
+            }
+
             if(shippingPercentage.text?.isEmpty == true)
             {
                 showError("Please fill in the shipping cost percentage")

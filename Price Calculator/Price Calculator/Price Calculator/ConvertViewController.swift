@@ -104,7 +104,7 @@ class ConvertViewController: UIViewController, UITextFieldDelegate, UIPickerView
         {
             defaults.setObject(startWith , forKey: "startWith")
             defaults.setObject(calculateTo , forKey: "calculateTo")
-            defaults.setObject("CONVERT", forKey: "CalcType")
+            defaults.setObject("CONVERT", forKey: "Calctype")
             defaults.setDouble(amount, forKey: "amount")
             
             let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController")

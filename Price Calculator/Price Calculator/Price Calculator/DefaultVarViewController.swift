@@ -90,7 +90,7 @@ class DefaultVarViewController: UIViewController {
                 
                 defaults.setDouble(price, forKey: "nettoPrice")
                 print(defaults.floatForKey("nettoPrice"))
-                defaults.setObject("DEFAULT", forKey: "CalcType")
+                defaults.setObject("DEFAULT", forKey: "Calctype")
             }
             else{
                 showError("Please fill in the netto distributor price.")
@@ -107,7 +107,7 @@ class DefaultVarViewController: UIViewController {
                 let price : Double = Double(rightPrice)!
                 
                 defaults.setDouble(price, forKey: "brutoPrice")
-                defaults.setObject("DEFAULT", forKey: "CalcType")
+                defaults.setObject("DEFAULT", forKey: "Calctype")
             }
             else
             {
@@ -118,7 +118,7 @@ class DefaultVarViewController: UIViewController {
             {
                 let percentage : Double = Double(txtDiscountPercentage.text!)!
                 defaults.setDouble(percentage, forKey: "discountPercentage")
-                defaults.setObject("DEFAULT", forKey: "CalcType")
+                defaults.setObject("DEFAULT", forKey: "Calctype")
             }
             else
             {

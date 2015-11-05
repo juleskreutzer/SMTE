@@ -44,13 +44,23 @@ class ExportWebViewController: UIViewController {
         let result = defaults.doubleForKey("ExportResult")
         
         
-        if(defaults.stringForKey("Calctype") == "CUSTOM" || defaults.stringForKey("Calctype") == "DEFAULT")
+        var type = defaults.stringForKey("Calctype")
+        if(type == "CUSTOM")
         {
             nettoPer = defaults.doubleForKey("nettoPrice")
             shippingPer = defaults.doubleForKey("shippingCost")
             exchangePer = defaults.doubleForKey("correction")
             importTaxPer = defaults.doubleForKey("tax")
             marginPer = defaults.doubleForKey("margin")
+        }
+        else if(type == "DEFAULT")
+        {
+            nettoPer = defaults.doubleForKey("ExportNetto")
+            shippingPer = defaults.doubleForKey("DefaultShippingCost")
+            exchangePer = defaults.doubleForKey("DefaultExchangeRateCorrection")
+            importTaxPer = defaults.doubleForKey("DefaultImportTax")
+            marginPer = defaults.doubleForKey("DefaultProfitMargin")
+            
         }
         else
         {
